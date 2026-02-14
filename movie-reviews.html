@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html class="dark scroll-smooth" lang="es">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Detalle del Proyecto | Gabriel Bettiga .NET Developer</title>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+  <script src="../assets/js/script.js" defer></script>
+
+  <!-- config global de Tailwind  -->
+  <script src="../assets/js/tailwind-config.js"></script>
+
+
+
+  <!-- Fuentes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+
+  <!-- Iconos -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet" />
+
+  <!-- Tu CSS global -->
+  <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+
+<body
+  class="bg-background-light dark:bg-background-dark text-slate-800 dark:text-slate-200 font-display selection:bg-accent-red selection:text-white">
+
+  <!-- NAV -->
+  <nav
+    class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b border-white/5 bg-background-dark/80 backdrop-blur-md supports-[backdrop-filter]:bg-background-dark/60">
+
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+
+      <!-- IZQUIERDA (Logo + Inicio juntos) -->
+      <div class="flex items-center gap-8">
+
+        <!-- Logo -->
+        <div class="flex items-center gap-2">
+          <div
+            class="w-8 h-8 rounded bg-gradient-to-br from-primary to-blue-600 flex items-center justify-center text-white font-bold text-lg shadow-glow">
+            GB
+          </div>
+
+          <span class="text-xl font-bold tracking-tight text-white">
+            Gabriel Bettiga<span class="text-primary">.NET Developer</span>
+          </span>
+        </div>
+
+        <!-- Inicio (ahora queda pegado al logo) -->
+        <a class="hidden md:block text-sm font-medium text-slate-400 hover:text-white transition-colors"
+          href="index.html">
+          Inicio
+        </a>
+
+      </div>
+
+      <!-- DERECHA -->
+      <div class="hidden md:flex items-center gap-3">
+        <a href="../assets/cv/CV - Bettiga Gustavo Gabriel .pdf" download
+          class="px-5 py-2.5 rounded text-sm font-semibold border border-primary text-primary hover:bg-primary hover:text-white transition-all flex items-center gap-2">
+          <span class="material-icons-outlined text-base">download</span>
+          Descargar CV
+        </a>
+      </div>
+
+      <!-- Botón hamburguesa -->
+      <button id="mobileMenuBtn" class="md:hidden text-white" aria-label="Open menu" aria-expanded="false">
+        <span class="material-icons-outlined text-2xl">menu</span>
+      </button>
+
+    </div>
+
+    <!-- Menú móvil -->
+    <div id="mobileMenu" class="md:hidden hidden border-t border-white/5 bg-background-dark/95 backdrop-blur-md">
+      <div class="max-w-7xl mx-auto px-6 py-4 flex flex-col gap-3">
+
+        <a class="text-sm font-medium text-slate-300 hover:text-white transition-colors" href="index.html">
+          Inicio
+        </a>
+
+        <a href="../assets/cv/CV - Bettiga Gustavo Gabriel .pdf" download
+          class="mt-2 inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded text-sm font-semibold border border-primary text-primary hover:bg-primary hover:text-white transition-all">
+          <span class="material-icons-outlined text-base">download</span>
+          Descargar CV
+        </a>
+
+      </div>
+    </div>
+
+  </nav>
+
+
+  <div class="relative w-full overflow-hidden min-h-screen pt-20 pb-12">
+    <div
+      class="absolute top-0 left-1/4 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[120px] pointer-events-none mix-blend-screen z-0">
+    </div>
+    <div class="fixed inset-0 bg-grid-pattern pointer-events-none z-0 opacity-20"></div>
+
+    <div class="max-w-6xl mx-auto px-6 relative z-10">
+
+      <!-- BACK -->
+      <div class="pt-8 pb-6">
+        <a class="inline-flex items-center gap-2 text-sm text-slate-400 hover:text-primary transition-colors group"
+          href="index.html#projects">
+          <span
+            class="material-icons-outlined text-base group-hover:-translate-x-1 transition-transform">arrow_back</span>
+          Volver a Proyectos
+        </a>
+      </div>
+
+      <!-- HEADER -->
+      <div class="mb-10">
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white tracking-tight mb-4">
+          Plataforma de Reseñas de Películas
+        </h1>
+        <p class="text-xl text-slate-400 mb-6">Aplicación web de reseñas de películas con registro e inicio de sesión de
+          usuarios,
+          creación de opiniones y gestión de contenido. Desarrollada con ASP.NET MVC, Entity
+          Framework e Identity, incorporando además asistencia mediante IA para la generación de
+          reseñas.</p>
+
+        <div class="flex flex-wrap gap-3">
+
+  <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-highlight border border-white/10 text-xs font-semibold text-primary uppercase tracking-wide">
+    <span class="material-icons-outlined text-sm">person</span>
+    Registro de Usuarios
+  </span>
+
+  <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-highlight border border-white/10 text-xs font-semibold text-primary uppercase tracking-wide">
+    <span class="material-icons-outlined text-sm">lock</span>
+    Autenticación con Identity
+  </span>
+
+  <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-highlight border border-white/10 text-xs font-semibold text-accent-green uppercase tracking-wide">
+    <span class="material-icons-outlined text-sm">admin_panel_settings</span>
+    Panel de Administración
+  </span>
+
+  <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-highlight border border-white/10 text-xs font-semibold text-blue-400 uppercase tracking-wide">
+    <span class="material-icons-outlined text-sm">movie</span>
+    Gestión de Películas
+  </span>
+
+  <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-highlight border border-white/10 text-xs font-semibold text-blue-400 uppercase tracking-wide">
+    <span class="material-icons-outlined text-sm">rate_review</span>
+    Sistema de Reseñas
+  </span>
+
+  <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-highlight border border-white/10 text-xs font-semibold text-blue-400 uppercase tracking-wide">
+    <span class="material-icons-outlined text-sm">favorite</span>
+    Películas Favoritas
+  </span>
+
+  <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-highlight border border-white/10 text-xs font-semibold text-accent-green uppercase tracking-wide">
+    <span class="material-icons-outlined text-sm">search</span>
+    Búsqueda y Filtros
+  </span>
+
+</div>
+
+      </div>
+
+      <!--  CAROUSEL  -->
+      <div class="relative w-full mb-16 group">
+        <div
+          class="aspect-video w-full bg-surface-dark border border-white/5 rounded-xl overflow-hidden relative shadow-2xl">
+          <!-- ID para JS -->
+          <img id="carouselMainImage" alt="Project Screenshot Main"
+            class="w-full h-full object-cover opacity-90 hover:opacity-100 transition-opacity"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUpdhpjW2-uNqPnk9gAzfkTY9WpoHtxeg_5Hk8vaL_C5dews8-lvMfyh53VtUIiDwhxx3SCOgpBnRoGzFcUqGr3oyuEzU91wJLZO5afD8Qbg_Rr4rZ7CQo0I5i2iFUYaTQBfanw13JklXCGaAT4KH0vQUB38vMUEcDp_afyhaimDj9dh2_fe_Skt3i-52t5giW6n9QUxOqY2Zu7PqZG2Dxh8dPjNDxPfb8yypan2Y6pbkPbkofRs_zYVP3XoOXxvuQ8yP_-wpOOQtE" />
+
+          <!-- IDs para JS -->
+          <button id="carouselPrev"
+            class="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-black/50 hover:bg-primary text-white flex items-center justify-center backdrop-blur-sm border border-white/10 transition-all opacity-0 group-hover:opacity-100">
+            <span class="material-icons-outlined">chevron_left</span>
+          </button>
+          <button id="carouselNext"
+            class="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-black/50 hover:bg-primary text-white flex items-center justify-center backdrop-blur-sm border border-white/10 transition-all opacity-0 group-hover:opacity-100">
+            <span class="material-icons-outlined">chevron_right</span>
+          </button>
+
+          <!-- ID para contador -->
+          <div id="carouselCounter"
+            class="absolute top-4 right-4 px-3 py-1 bg-black/60 backdrop-blur-md rounded-full text-xs font-medium text-white border border-white/10">
+            1 / 19
+          </div>
+        </div>
+
+        <div class="mt-4 flex gap-4 overflow-x-auto pb-4 snap-x">
+          <!-- Thumb 1  -->
+          <button
+            class="carousel-thumb shrink-0 w-32 aspect-video rounded-lg overflow-hidden border-2 border-primary ring-2 ring-primary/20 relative snap-start"
+            data-full="../assets/img/projects/proyecto_3/HomeDetalles.jpg">
+            <img class="w-full h-full object-cover"
+              src="../assets/img/projects/proyecto_3/HomeDetalles.jpg" />
+          </button>
+
+          <!-- Thumb 2 -->
+          <button
+            class="carousel-thumb shrink-0 w-32 aspect-video rounded-lg overflow-hidden border border-white/10 hover:border-primary/50 relative opacity-60 hover:opacity-100 transition-all snap-start"
+            data-full="../assets/img/projects/proyecto_3/DetallesPelicula2.jpg">
+            <img class="w-full h-full object-cover"
+              src="../assets/img/projects/proyecto_3/DetallesPelicula2.jpg" />
+          </button>
+
+          <!-- Thumb 3 -->
+          <button
+            class="carousel-thumb shrink-0 w-32 aspect-video rounded-lg overflow-hidden border border-white/10 hover:border-primary/50 relative opacity-60 hover:opacity-100 transition-all snap-start"
+            data-full="../assets/img/projects/proyecto_3/DetallesPelicula1.jpg">
+            <img class="w-full h-full object-cover"
+              src="../assets/img/projects/proyecto_3/DetallesPelicula1.jpg" />
+          </button>
+
+          <!-- Thumb  -->
+          <button
+            class="carousel-thumb shrink-0 w-32 aspect-video rounded-lg overflow-hidden border border-white/10 hover:border-primary/50 relative opacity-60 hover:opacity-100 transition-all snap-start"
+            data-full="../assets/img/projects/proyecto_3/CrearReseña.jpg">
+            <img class="w-full h-full object-cover"
+              src="../assets/img/projects/proyecto_3/CrearReseña.jpg" />
+          </button>
+
+          <!-- Thumb  5-->
+          <button
+            class="carousel-thumb shrink-0 w-32 aspect-video rounded-lg overflow-hidden border border-white/10 hover:border-primary/50 relative opacity-60 hover:opacity-100 transition-all snap-start"
+            data-full="../assets/img/projects/proyecto_3/InicioSesion.jpg">
+            <img class="w-full h-full object-cover"
+              src="../assets/img/projects/proyecto_3/InicioSesion.jpg" />
+          </button>
+
+          <!-- Thumb  6-->
+          <button
+            class="carousel-thumb shrink-0 w-32 aspect-video rounded-lg overflow-hidden border border-white/10 hover:border-primary/50 relative opacity-60 hover:opacity-100 transition-all snap-start"
+            data-full="../assets/img/projects/proyecto_3/Registrarse.jpg">
+            <img class="w-full h-full object-cover"
+              src="../assets/img/projects/proyecto_3/Registrarse.jpg" />
+          </button>
+
+          <!-- Thumb  7-->
+          <button
+            class="carousel-thumb shrink-0 w-32 aspect-video rounded-lg overflow-hidden border border-white/10 hover:border-primary/50 relative opacity-60 hover:opacity-100 transition-all snap-start"
+            data-full="../assets/img/projects/proyecto_3/MiPerfil.jpg">
+            <img class="w-full h-full object-cover"
+              src="../assets/img/projects/proyecto_3/MiPerfil.jpg" />
+          </button>
+
+          <!-- Thumb  8-->
+          <button
+            class="carousel-thumb shrink-0 w-32 aspect-video rounded-lg overflow-hidden border border-white/10 hover:border-primary/50 relative opacity-60 hover:opacity-100 transition-all snap-start"
+            data-full="../assets/img/projects/proyecto_3/MiPerfilActualizarClave.jpg">
+            <img class="w-full h-full object-cover"
+              src="../assets/img/projects/proyecto_3/MiPerfilActualizarClave.jpg" />
+          </button>
+
+          <!-- Thumb  9-->
+          <button
+            class="carousel-thumb shrink-0 w-32 aspect-video rounded-lg overflow-hidden border border-white/10 hover:border-primary/50 relative opacity-60 hover:opacity-100 transition-all snap-start"
+            data-full="../assets/img/projects/proyecto_3/MisReseñas.jpg">
+            <img class="w-full h-full object-cover"
+              src="../assets/img/projects/proyecto_3/MisReseñas.jpg" />
+          </button>
+
+          <!-- Thumb  10-->
+          <button
+            class="carousel-thumb shrink-0 w-32 aspect-video rounded-lg overflow-hidden border border-white/10 hover:border-primary/50 relative opacity-60 hover:opacity-100 transition-all snap-start"
+            data-full="../assets/img/projects/proyecto_3/MiPerfilAdmin.jpg">
+            <img class="w-full h-full object-cover"
+              src="../assets/img/projects/proyecto_3/MiPerfilAdmin.jpg" />
+          </button>
+
+          <!-- Thumb  11-->
+          <button
+            class="carousel-thumb shrink-0 w-32 aspect-video rounded-lg overflow-hidden border border-white/10 hover:border-primary/50 relative opacity-60 hover:opacity-100 transition-all snap-start"
+            data-full="../assets/img/projects/proyecto_3/GestionDePeliculas.jpg">
+            <img class="w-full h-full object-cover"
+              src="../assets/img/projects/proyecto_3/GestionDePeliculas.jpg" />
+          </button>
+
+          <!-- Thumb  12-->
+          <button
+            class="carousel-thumb shrink-0 w-32 aspect-video rounded-lg overflow-hidden border border-white/10 hover:border-primary/50 relative opacity-60 hover:opacity-100 transition-all snap-start"
+            data-full="../assets/img/projects/proyecto_3/AñadirPelicula.jpg">
+            <img class="w-full h-full object-cover"
+              src="../assets/img/projects/proyecto_3/AñadirPelicula.jpg" />
+          </button>
+
+          <!-- Thumb  13-->
+          <button
+            class="carousel-thumb shrink-0 w-32 aspect-video rounded-lg overflow-hidden border border-white/10 hover:border-primary/50 relative opacity-60 hover:opacity-100 transition-all snap-start"
+            data-full="../assets/img/projects/proyecto_3/EditarPelicula.jpg">
+            <img class="w-full h-full object-cover"
+              src="../assets/img/projects/proyecto_3/EditarPelicula.jpg" />
+          </button>
+
+          <!-- Thumb  14-->
+          <button
+            class="carousel-thumb shrink-0 w-32 aspect-video rounded-lg overflow-hidden border border-white/10 hover:border-primary/50 relative opacity-60 hover:opacity-100 transition-all snap-start"
+            data-full="../assets/img/projects/proyecto_3/EliminarPelicula.jpg">
+            <img class="w-full h-full object-cover"
+              src="../assets/img/projects/proyecto_3/EliminarPelicula.jpg" />
+          </button>
+
+          <!-- Thumb  15-->
+          <button
+            class="carousel-thumb shrink-0 w-32 aspect-video rounded-lg overflow-hidden border border-white/10 hover:border-primary/50 relative opacity-60 hover:opacity-100 transition-all snap-start"
+            data-full="../assets/img/projects/proyecto_3/GestionDePlataformas.jpg">
+            <img class="w-full h-full object-cover"
+              src="../assets/img/projects/proyecto_3/GestionDePlataformas.jpg" />
+          </button>
+
+          <!-- Thumb  16-->
+          <button
+            class="carousel-thumb shrink-0 w-32 aspect-video rounded-lg overflow-hidden border border-white/10 hover:border-primary/50 relative opacity-60 hover:opacity-100 transition-all snap-start"
+            data-full="../assets/img/projects/proyecto_3/EditarPlataforma.jpg">
+            <img class="w-full h-full object-cover"
+              src="../assets/img/projects/proyecto_3/EditarPlataforma.jpg" />
+          </button>
+
+          <!-- Thumb  17-->
+          <button
+            class="carousel-thumb shrink-0 w-32 aspect-video rounded-lg overflow-hidden border border-white/10 hover:border-primary/50 relative opacity-60 hover:opacity-100 transition-all snap-start"
+            data-full="../assets/img/projects/proyecto_3/CrearPlataforma.jpg">
+            <img class="w-full h-full object-cover"
+              src="../assets/img/projects/proyecto_3/CrearPlataforma.jpg" />
+          </button>
+
+          <!-- Thumb  18-->
+          <button
+            class="carousel-thumb shrink-0 w-32 aspect-video rounded-lg overflow-hidden border border-white/10 hover:border-primary/50 relative opacity-60 hover:opacity-100 transition-all snap-start"
+            data-full="../assets/img/projects/proyecto_3/AdministracionGeneros.jpg">
+            <img class="w-full h-full object-cover"
+              src="../assets/img/projects/proyecto_3/AdministracionGeneros.jpg" />
+          </button>
+
+          <!-- Thumb  18-->
+          <button
+            class="carousel-thumb shrink-0 w-32 aspect-video rounded-lg overflow-hidden border border-white/10 hover:border-primary/50 relative opacity-60 hover:opacity-100 transition-all snap-start"
+            data-full="../assets/img/projects/proyecto_3/PantallaDeError.jpg">
+            <img class="w-full h-full object-cover"
+              src="../assets/img/projects/proyecto_3/PantallaDeError.jpg" />
+          </button>
+
+
+          
+        </div>
+      </div>
+
+      <!-- CONTENT -->
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-20">
+        <div class="lg:col-span-2">
+          <h2 class="text-2xl font-bold text-white mb-6 border-b border-white/5 pb-4">Sobre el Proyecto</h2>
+
+          <div class="prose prose-invert prose-lg text-slate-400 leading-relaxed max-w-none">
+
+            <p class="mb-6">
+              Esta aplicación es una plataforma web de reseñas de películas creada con el objetivo de practicar y
+              aplicar un flujo completo de desarrollo web:
+              desde la persistencia de datos y la arquitectura del proyecto hasta la interfaz de usuario y la
+              experiencia de uso.
+              El sistema permite a los usuarios registrarse, iniciar sesión y participar dejando reseñas y puntuaciones
+              sobre películas disponibles en la cartelera.
+            </p>
+
+            <p class="mb-6">
+              La aplicación está organizada en módulos y pantallas para separar claramente las responsabilidades.
+              Incluye navegación por secciones, listados con filtros/búsquedas, vistas de detalle y formularios de
+              alta/edición.
+              Se implementó autenticación y autorización con ASP.NET Identity para controlar el acceso según el rol del
+              usuario, diferenciando funcionalidades de usuario común y administrador.
+            </p>
+
+            <p class="mb-6">
+              A nivel de funcionalidad, el usuario puede explorar el catálogo de películas, ingresar a la vista de
+              detalle y ver reseñas existentes.
+              Además puede crear su propia reseña asignando una calificación y un comentario, y administrar su
+              información de perfil.
+              Por otro lado, el rol administrador cuenta con pantallas para gestionar el contenido: alta, baja y
+              modificación de películas, categorías y usuarios.
+            </p>
+
+            <ul class="list-disc pl-5 space-y-2 text-slate-300">
+              <li><strong>Autenticación completa:</strong> registro, login, logout y manejo de sesión con ASP.NET
+                Identity.</li>
+              <li><strong>Roles y permisos:</strong> separación de accesos entre usuario y administrador.</li>
+              <li><strong>Películas:</strong> listado de cartelera, vista de detalle y CRUD administrativo.</li>
+              <li><strong>Reseñas:</strong> creación de reseñas con puntuación y comentario, visualización en el detalle
+                de la película.</li>
+              <li><strong>Categorías:</strong> administración de categorías y asociación con películas.</li>
+              <li><strong>Usuarios:</strong> gestión de usuarios desde panel administrador y edición de perfil.</li>
+              <li><strong>Persistencia:</strong> Entity Framework + SQL Server, con relaciones entre entidades y
+                validaciones.</li>
+              <li><strong>Interacción dinámica:</strong> uso de Fetch API / AJAX para acciones sin recargar la página
+                (por ejemplo en la creación de reseñas mediante modal y vista parcial).</li>
+            </ul>
+
+          </div>
+        </div>
+
+        <div class="lg:col-span-1 space-y-10">
+          <div>
+            <h3 class="text-sm font-bold text-white uppercase tracking-wider mb-4">Tecnologías</h3>
+
+            <div class="flex flex-wrap gap-2">
+
+              <!-- Backend -->
+              <span
+                class="px-3 py-1.5 rounded-md bg-surface-dark border border-white/10 text-slate-300 text-sm font-medium hover:text-primary hover:border-primary/30 transition-colors">C#</span>
+
+              <span
+                class="px-3 py-1.5 rounded-md bg-surface-dark border border-white/10 text-slate-300 text-sm font-medium hover:text-primary hover:border-primary/30 transition-colors">ASP.NET
+                MVC</span>
+
+              <span
+                class="px-3 py-1.5 rounded-md bg-surface-dark border border-white/10 text-slate-300 text-sm font-medium hover:text-primary hover:border-primary/30 transition-colors">Razor
+                Views</span>
+
+              <span
+                class="px-3 py-1.5 rounded-md bg-surface-dark border border-white/10 text-slate-300 text-sm font-medium hover:text-primary hover:border-primary/30 transition-colors">ASP.NET
+                Identity</span>
+
+              <span
+                class="px-3 py-1.5 rounded-md bg-surface-dark border border-white/10 text-slate-300 text-sm font-medium hover:text-primary hover:border-primary/30 transition-colors">Entity
+                Framework</span>
+
+              <span
+                class="px-3 py-1.5 rounded-md bg-surface-dark border border-white/10 text-slate-300 text-sm font-medium hover:text-primary hover:border-primary/30 transition-colors">LINQ</span>
+
+              <span
+                class="px-3 py-1.5 rounded-md bg-surface-dark border border-white/10 text-slate-300 text-sm font-medium hover:text-primary hover:border-primary/30 transition-colors">SQL
+                Server</span>
+
+              <!-- Frontend -->
+              <span
+                class="px-3 py-1.5 rounded-md bg-surface-dark border border-white/10 text-slate-300 text-sm font-medium hover:text-primary hover:border-primary/30 transition-colors">HTML5</span>
+
+              <span
+                class="px-3 py-1.5 rounded-md bg-surface-dark border border-white/10 text-slate-300 text-sm font-medium hover:text-primary hover:border-primary/30 transition-colors">CSS3</span>
+
+              <span
+                class="px-3 py-1.5 rounded-md bg-surface-dark border border-white/10 text-slate-300 text-sm font-medium hover:text-primary hover:border-primary/30 transition-colors">JavaScript</span>
+
+              <span
+                class="px-3 py-1.5 rounded-md bg-surface-dark border border-white/10 text-slate-300 text-sm font-medium hover:text-primary hover:border-primary/30 transition-colors">Fetch
+                API / AJAX</span>
+
+              <span
+                class="px-3 py-1.5 rounded-md bg-surface-dark border border-white/10 text-slate-300 text-sm font-medium hover:text-primary hover:border-primary/30 transition-colors">Bootstrap
+                </span>
+
+              <!-- Conceptos -->
+              <span
+                class="px-3 py-1.5 rounded-md bg-surface-dark border border-white/10 text-slate-300 text-sm font-medium hover:text-primary hover:border-primary/30 transition-colors">Arquitectura
+                MVC</span>
+
+              <span
+                class="px-3 py-1.5 rounded-md bg-surface-dark border border-white/10 text-slate-300 text-sm font-medium hover:text-primary hover:border-primary/30 transition-colors">CRUD
+                Operations</span>
+
+              <span
+                class="px-3 py-1.5 rounded-md bg-surface-dark border border-white/10 text-slate-300 text-sm font-medium hover:text-primary hover:border-primary/30 transition-colors">Autenticación
+                y Autorización</span>
+
+            </div>
+          </div>
+
+          <!-- GitHub -->
+          <div class="pt-4">
+            <a class="w-full mt-3 flex items-center justify-center gap-2 px-6 py-3 rounded bg-transparent hover:bg-white/5 border border-white/10 text-slate-300 hover:text-white font-medium transition-all"
+              href="https://github.com/F1GabrielBettiga/ProyectoFinal4" target="_blank">
+              <span class="material-icons-outlined text-lg">code</span>
+              Ver repositorio en GitHub
+            </a>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- FOOTER -->
+      <div class="mt-20 pt-10 border-t border-white/5 text-center">
+        <a class="text-slate-400 hover:text-white transition-colors text-sm font-medium inline-flex items-center gap-1"
+          href="index.html#projects">
+          <span class="material-icons-outlined text-sm">arrow_back</span>
+          Volver a proyectos
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+  <footer class="py-8 border-t border-white/5 bg-background-dark text-center relative z-10">
+    <p class="text-slate-500 text-sm">© 2026 Porfolio Gabriel Bettiga.</p>
+  </footer>
+
+  <!-- JS del carrusel -->
+  <script src="../assets/js/carousel.js" defer></script>
+</body>
+
+</html>

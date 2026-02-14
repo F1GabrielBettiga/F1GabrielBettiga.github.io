@@ -1,0 +1,1180 @@
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gabriel Bettiga | Desarrollador .NET</title>
+
+    <!-- Google Fonts + Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700&display=swap"
+        rel="stylesheet" />
+
+    <!--  CSS -->
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Tailwind config  -->
+    <script src="../assets/js/tailwind-config.js"></script>
+
+    <!-- JS -->
+    <script src="../assets/js/script.js" defer></script>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark text-slate-800 dark:text-slate-200 font-display selection:bg-accent-red selection:text-white">
+    <!-- Nav -->
+    <nav
+        class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b border-white/5 bg-background-dark/80 backdrop-blur-md supports-[backdrop-filter]:bg-background-dark/60">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+
+            <!-- Logo -->
+            <div class="flex items-center gap-2">
+                <div
+                    class="w-8 h-8 rounded bg-gradient-to-br from-primary to-blue-600 flex items-center justify-center text-white font-bold text-lg shadow-glow">
+                    GB
+                </div>
+                <span class="text-xl font-bold tracking-tight text-white">
+                    Gabriel Bettiga<span class="text-primary">.NET Developer</span>
+                </span>
+            </div>
+
+            <!-- Menu PC-->
+            <div class="hidden md:flex items-center gap-8">
+                <a class="text-sm font-medium text-slate-400 hover:text-white transition-colors" href="#hero">Inicio</a>
+                <a class="text-sm font-medium text-slate-400 hover:text-white transition-colors" href="#about">Sobre
+                    mí</a>
+                <a class="text-sm font-medium text-slate-400 hover:text-white transition-colors"
+                    href="#skills">Skills</a>
+                <a class="text-sm font-medium text-slate-400 hover:text-white transition-colors"
+                    href="#services">Servicios</a>
+                <a class="text-sm font-medium text-slate-400 hover:text-white transition-colors"
+                    href="#projects">Proyectos</a>
+                <a class="text-sm font-medium text-slate-400 hover:text-white transition-colors"
+                    href="#experience">Experiencia</a>
+            </div>
+
+            <!-- CTA Buttons -->
+            <div class="hidden md:flex items-center gap-3">
+
+                <!-- Descargar CV -->
+                <a href="../assets/cv/CV - Bettiga Gustavo Gabriel .pdf" download
+                    class="px-5 py-2.5 rounded text-sm font-semibold border border-primary text-primary hover:bg-primary hover:text-white transition-all flex items-center gap-2">
+
+                    <span class="material-icons-outlined text-base">download</span>
+                    Descargar CV
+                </a>
+
+                <!-- Contactarme  -->
+                <a class="px-5 py-2.5 rounded text-sm font-semibold bg-accent-red hover:bg-red-600 text-white transition-all shadow-[0_0_15px_-3px_rgba(239,68,68,0.5)] hover:shadow-[0_0_20px_-3px_rgba(239,68,68,0.7)]"
+                    href="#contact">
+                    Contactarme
+                </a>
+            </div>
+
+            <!-- Menu Celular -->
+            <button id="mobileMenuBtn" class="md:hidden text-white" aria-label="Open menu" aria-expanded="false">
+                <span class="material-icons-outlined text-2xl">menu</span>
+            </button>
+        </div>
+
+        <!-- Panel Menu Celular-->
+        <div id="mobileMenu" class="md:hidden hidden border-t border-white/5 bg-background-dark/95 backdrop-blur-md">
+            <div class="max-w-7xl mx-auto px-6 py-4 flex flex-col gap-3">
+                <a class="text-sm font-medium text-slate-300 hover:text-white transition-colors" href="#hero">Inicio</a>
+                <a class="text-sm font-medium text-slate-300 hover:text-white transition-colors" href="#about">Sobre
+                    mí</a>
+                <a class="text-sm font-medium text-slate-300 hover:text-white transition-colors"
+                    href="#skills">Skills</a>
+                <a class="text-sm font-medium text-slate-300 hover:text-white transition-colors"
+                    href="#services">Servicios</a>
+                <a class="text-sm font-medium text-slate-300 hover:text-white transition-colors"
+                    href="#projects">Proyectos</a>
+                <a class="text-sm font-medium text-slate-300 hover:text-white transition-colors"
+                    href="#experience">Experiencia</a>
+
+                <!-- Botón Descargar CV celular -->
+                <a href="../assets/cv/CV - Bettiga Gustavo Gabriel .pdf" download
+                    class="mt-2 inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded text-sm font-semibold border border-primary text-primary hover:bg-primary hover:text-white transition-all">
+                    <span class="material-icons-outlined text-base">download</span>
+                    Descargar CV
+                </a>
+
+                <!-- Botón Contacto celular -->
+                <a class="inline-block px-5 py-2.5 rounded text-sm font-semibold bg-accent-red hover:bg-red-600 text-white transition-all text-center"
+                    href="#contact">
+                    Contactarme
+                </a>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Main  -->
+    <div class="relative w-full overflow-hidden min-h-screen pt-20">
+        <!-- Background -->
+        <div
+            class="absolute top-0 left-1/4 w-[500px] h-[500px] bg-primary/10 rounded-full blur-[120px] pointer-events-none mix-blend-screen z-0">
+        </div>
+        <div
+            class="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-primary/5 rounded-full blur-[100px] pointer-events-none mix-blend-screen z-0">
+        </div>
+        <div class="fixed inset-0 bg-grid-pattern pointer-events-none z-0 opacity-20"></div>
+
+        <!-- HERO -->
+        <section id="hero" class="relative z-10 min-h-[calc(100vh-80px)] flex items-center py-10 px-6">
+            <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="order-2 lg:order-1 text-center lg:text-left">
+                    <span
+                        class="inline-block py-1 px-3 rounded-full bg-surface-dark border border-white/10 text-primary text-xs font-semibold tracking-wider uppercase mb-6 shadow-sm">
+                        .NET Developer
+                    </span>
+
+                    <h1
+                        class="text-5xl md:text-6xl lg:text-7xl font-extrabold text-white tracking-tight mb-6 leading-[1.1]">
+                        Transformo <br />
+                        <span
+                            class="text-transparent bg-clip-text bg-gradient-to-r from-primary via-blue-400 to-accent-green">
+                            ideas en software
+                        </span>
+                    </h1>
+
+                    <p class="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto lg:mx-0 leading-relaxed mb-8">
+                        Desarrollo aplicaciones web con C# y .NET. Trabajo con bases de datos y arquitectura en capas,
+                        aplicando lo que fui aprendiendo en la carrera y en mi experiencia laboral dentro del área de
+                        sistemas. Próximamente comenzaré la carrera de Ciencia de Datos e Inteligencia Artificial.
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start">
+                        <a class="w-full sm:w-auto px-8 py-3.5 rounded bg-primary hover:bg-primary-dark text-white font-semibold transition-all shadow-glow hover:shadow-glow-hover text-center"
+                            href="#projects">
+                            Ver proyectos
+                        </a>
+
+                        <a class="w-full sm:w-auto px-8 py-3.5 rounded border border-white/10 hover:bg-white/5 text-white font-semibold transition-all flex items-center justify-center gap-2 group"
+                            href="#contact">
+                            Contactarme
+                            <span
+                                class="material-icons-outlined text-sm transition-transform group-hover:translate-x-1">arrow_forward</span>
+                        </a>
+                    </div>
+
+                    <div class="mt-12 flex items-center justify-center lg:justify-start gap-6 text-slate-500">
+                        <span class="flex items-center gap-2">
+                            <span class="w-2 h-2 rounded-full bg-accent-green"></span> Disponible para trabajar
+                        </span>
+                        <span class="hidden sm:inline-block">|</span>
+                        <div class="flex gap-4">
+                            <a class="hover:text-white transition-colors" href="#projects"><i
+                                    class="material-icons-outlined">code</i></a>
+                            <a class="hover:text-white transition-colors" href="#experience"><i
+                                    class="material-icons-outlined">work</i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="order-1 lg:order-2 flex justify-center lg:justify-end relative">
+                    <div class="relative w-72 h-72 md:w-96 md:h-96">
+                        <div
+                            class="absolute inset-0 rounded-full bg-gradient-to-tr from-primary to-accent-green blur-[40px] opacity-30 animate-pulse">
+                        </div>
+                        <div
+                            class="relative w-full h-full rounded-full border-2 border-white/10 bg-surface-dark overflow-hidden shadow-2xl flex items-center justify-center z-10">
+                            <!-- Imagen de perfil-->
+                            <img src="../assets/img/profile/profile.jpg" alt="Gabriel Bettiga"
+                                class="w-full h-full object-cover">
+                        </div>
+
+                        <div
+                            class="absolute -top-4 -right-4 w-20 h-20 bg-surface-dark rounded-xl border border-white/10 flex items-center justify-center shadow-lg z-20 animate-[bounce_3s_infinite]">
+                            <span class="font-bold text-2xl text-primary">C#</span>
+                        </div>
+
+                        <div
+                            class="absolute -bottom-4 -left-4 w-auto px-6 py-3 bg-surface-dark rounded-full border border-white/10 flex items-center gap-3 shadow-lg z-20">
+                            <span class="w-3 h-3 rounded-full bg-accent-green animate-pulse"></span>
+                            <span class="font-bold text-white text-sm">.NET 10.0</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SOBRE MI -->
+        <section id="about" class="relative z-10 py-24 px-6 bg-surface-dark/30 border-y border-white/5">
+            <div class="max-w-7xl mx-auto">
+                <div class="flex flex-col lg:flex-row gap-16 items-start">
+                    <div class="lg:w-1/2">
+                        <span class="text-primary font-semibold tracking-wider uppercase text-sm mb-2 block">Sobre
+                            mí</span>
+                        <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
+                            Mi camino en desarrollo de software.
+                        </h2>
+
+                        <p class="text-slate-400 leading-relaxed mb-6">
+                            Soy Técnico Superior en Programación egresado de la UTN. Durante mi experiencia laboral
+                            dentro del área de sistemas participé en el mantenimiento y evolución de aplicaciones
+                            internas, colaborando en el desarrollo de pantallas, funcionalidades y consultas a base de
+                            datos.
+                            También trabajé en la migración de una aplicación desde Visual Basic a .NET, implementando
+                            vistas, manejo de datos entre controladores y vistas, y resolución de incidencias junto a
+                            usuarios y otros integrantes del equipo.
+                        </p>
+                        <p class="text-slate-400 leading-relaxed mb-8">
+                            Actualmente me encuentro enfocado en el desarrollo con C# y .NET, creando aplicaciones web y
+                            trabajando con bases de datos y arquitectura en capas. Todo lo que desarrollo lo aplico
+                            tanto en proyectos personales como en prácticas reales, buscando seguir creciendo
+                            profesionalmente como desarrollador.
+                            Próximamente comenzaré la carrera de Ciencia de Datos e Inteligencia Artificial para
+                            continuar ampliando mi formación.
+                        </p>
+
+                        <div class="grid grid-cols-2 gap-6">
+                            <div>
+                                <h4 class="text-white font-bold mb-1">Ubicación</h4>
+                                <p class="text-slate-400 text-sm">Argentina</p>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-bold mb-1">Educación</h4>
+                                <p class="text-slate-400 text-sm">UTN - Técnico Superior en Programación</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="lg:w-1/2 w-full">
+                        <h3 class="text-xl font-bold text-white mb-6">Tecnologías que utilizo</h3>
+                        <div class="flex flex-wrap gap-3">
+                            <span
+                                class="px-4 py-2 rounded bg-surface-highlight border border-white/5 text-slate-300 text-sm font-medium hover:border-primary/50 hover:text-primary transition-colors cursor-default">C#
+                                / .NET</span>
+                            <span
+                                class="px-4 py-2 rounded bg-surface-highlight border border-white/5 text-slate-300 text-sm font-medium hover:border-primary/50 hover:text-primary transition-colors cursor-default">ASP.NET
+                                MVC</span>
+                            <span
+                                class="px-4 py-2 rounded bg-surface-highlight border border-white/5 text-slate-300 text-sm font-medium hover:border-primary/50 hover:text-primary transition-colors cursor-default">Entity
+                                Framework</span>
+                            <span
+                                class="px-4 py-2 rounded bg-surface-highlight border border-white/5 text-slate-300 text-sm font-medium hover:border-primary/50 hover:text-primary transition-colors cursor-default">C/C++</span>
+                            <span
+                                class="px-4 py-2 rounded bg-surface-highlight border border-white/5 text-slate-300 text-sm font-medium hover:border-primary/50 hover:text-primary transition-colors cursor-default">Java</span>
+                            <span
+                                class="px-4 py-2 rounded bg-surface-highlight border border-white/5 text-slate-300 text-sm font-medium hover:border-primary/50 hover:text-primary transition-colors cursor-default">SQL
+                                Server</span>
+                            <span
+                                class="px-4 py-2 rounded bg-surface-highlight border border-white/5 text-slate-300 text-sm font-medium hover:border-primary/50 hover:text-primary transition-colors cursor-default">HTML5</span>
+                            <span
+                                class="px-4 py-2 rounded bg-surface-highlight border border-white/5 text-slate-300 text-sm font-medium hover:border-primary/50 hover:text-primary transition-colors cursor-default">CSS3</span>
+                            <span
+                                class="px-4 py-2 rounded bg-surface-highlight border border-white/5 text-slate-300 text-sm font-medium hover:border-primary/50 hover:text-primary transition-colors cursor-default">JavaScript</span>
+                            <span
+                                class="px-4 py-2 rounded bg-surface-highlight border border-white/5 text-slate-300 text-sm font-medium hover:border-primary/50 hover:text-primary transition-colors cursor-default">Git</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SKILLS -->
+        <section id="skills" class="relative z-10 py-24 px-6">
+            <div class="max-w-7xl mx-auto">
+                <div class="mb-16 md:mb-20 text-center">
+                    <span
+                        class="inline-block py-1 px-3 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-semibold tracking-wider uppercase mb-4">
+                        Skills
+                    </span>
+                    <h2 class="text-4xl md:text-5xl font-extrabold text-white tracking-tight mb-4">Habilidades técnicas
+                    </h2>
+                    <p class="text-lg text-slate-400 max-w-2xl mx-auto leading-relaxed">
+                        Estas son las tecnologías y herramientas con las que trabajo habitualmente.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div
+                        class="group p-6 rounded-xl bg-surface-dark border border-white/5 hover:border-primary/50 transition-all duration-300 hover:-translate-y-1 shadow-lg hover:shadow-glow-hover">
+                        <div
+                            class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
+                            <span class="material-icons-outlined text-primary text-2xl">dns</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-4">Backend</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span
+                                class="px-3 py-1.5 rounded-full bg-surface-highlight border border-white/5 text-slate-300 text-xs font-medium">C#
+                                / .NET</span>
+                            <span
+                                class="px-3 py-1.5 rounded-full bg-surface-highlight border border-white/5 text-slate-300 text-xs font-medium">ASP.NET
+                                Core / MVC</span>
+                            <span
+                                class="px-3 py-1.5 rounded-full bg-surface-highlight border border-white/5 text-slate-300 text-xs font-medium">Web
+                                API (REST)</span>
+                            <span
+                                class="px-3 py-1.5 rounded-full bg-surface-highlight border border-white/5 text-slate-300 text-xs font-medium">Entity
+                                Framework</span>
+                            <span
+                                class="px-3 py-1.5 rounded-full bg-surface-highlight border border-white/5 text-slate-300 text-xs font-medium">LINQ</span>
+                            <span
+                                class="px-3 py-1.5 rounded-full bg-surface-highlight border border-white/5 text-slate-300 text-xs font-medium">Arquitectura
+                                en capas</span>
+                            <span
+                                class="px-3 py-1.5 rounded-full bg-surface-highlight border border-white/5 text-slate-300 text-xs font-medium">ViewModels</span>
+                            <span
+                                class="px-3 py-1.5 rounded-full bg-surface-highlight border border-white/5 text-slate-300 text-xs font-medium">Partial
+                                Views</span>
+                            <span
+                                class="px-3 py-1.5 rounded-full bg-surface-highlight border border-white/5 text-slate-300 text-xs font-medium">Manejo
+                                de sesiones</span>
+                            <span
+                                class="px-3 py-1.5 rounded-full bg-surface-highlight border border-white/5 text-slate-300 text-xs font-medium">Java</span>
+                            <span
+                                class="px-3 py-1.5 rounded-full bg-surface-highlight border border-white/5 text-slate-300 text-xs font-medium">Validaciones
+                                del lado servidor</span>
+                            <span
+                                class="px-3 py-1.5 rounded-full bg-surface-highlight border border-white/5 text-slate-300 text-xs font-medium">Windows
+                                Forms (WinForms)</span>
+                            <span
+                                class="px-3 py-1.5 rounded-full bg-surface-highlight border border-white/5 text-slate-300 text-xs font-medium">C++</span>
+
+                        </div>
+                    </div>
+
+                    <div
+                        class="group p-6 rounded-xl bg-surface-dark border border-white/5 hover:border-primary/50 transition-all duration-300 hover:-translate-y-1 shadow-lg hover:shadow-glow-hover">
+                        <div
+                            class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
+                            <span class="material-icons-outlined text-primary text-2xl">storage</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-4">Databases</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span
+                                class="px-3 py-1.5 rounded-full bg-surface-highlight border border-white/5 text-slate-300 text-xs font-medium">SQL
+                                Server</span>
+                            <span
+                                class="px-3 py-1.5 rounded-full bg-surface-highlight border border-white/5 text-slate-300 text-xs font-medium">MySQL</span>
+                            <span
+                                class="px-3 py-1.5 rounded-full bg-surface-highlight border border-white/5 text-slate-300 text-xs font-medium">Consultas
+                                SQL</span>
+                            <span
+                                class="px-3 py-1.5 rounded-full bg-surface-highlight border border-white/5 text-slate-300 text-xs font-medium">Stored
+                                Procedures</span>
+                            <span
+                                class="px-3 py-1.5 rounded-full bg-surface-highlight border border-white/5 text-slate-300 text-xs font-medium">Diseño
+                                de base de datos</span>
+                            <span
+                                class="px-3 py-1.5 rounded-full bg-surface-highlight border border-white/5 text-slate-300 text-xs font-medium">CRUD</span>
+                            <span
+                                class="px-3 py-1.5 rounded-full bg-surface-highlight border border-white/5 text-slate-300 text-xs font-medium">Relaciones
+                                y normalización</span>
+                            <span
+                                class="px-3 py-1.5 rounded-full bg-surface-highlight border border-white/5 text-slate-300 text-xs font-medium">ADO.NET</span>
+                            <span
+                                class="px-3 py-1.5 rounded-full bg-surface-highlight border border-white/5 text-slate-300 text-xs font-medium">Entity
+                                Framework ORM</span>
+                        </div>
+                    </div>
+
+                    <div
+                        class="group p-6 rounded-xl bg-surface-dark border border-white/5 hover:border-primary/50 transition-all duration-300 hover:-translate-y-1 shadow-lg hover:shadow-glow-hover">
+                        <div
+                            class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
+                            <span class="material-icons-outlined text-primary text-2xl">laptop_mac</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-4">Frontend</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span
+                                class="px-3 py-1.5 rounded-full bg-surface-highlight border border-white/5 text-slate-300 text-xs font-medium">HTML5</span>
+                            <span
+                                class="px-3 py-1.5 rounded-full bg-surface-highlight border border-white/5 text-slate-300 text-xs font-medium">CSS3</span>
+                            <span
+                                class="px-3 py-1.5 rounded-full bg-surface-highlight border border-white/5 text-slate-300 text-xs font-medium">JavaScript</span>
+                            <span
+                                class="px-3 py-1.5 rounded-full bg-surface-highlight border border-white/5 text-slate-300 text-xs font-medium">Razor
+                                Views</span>
+                            <span
+                                class="px-3 py-1.5 rounded-full bg-surface-highlight border border-white/5 text-slate-300 text-xs font-medium">DOM
+                                manipulation</span>
+                            <span
+                                class="px-3 py-1.5 rounded-full bg-surface-highlight border border-white/5 text-slate-300 text-xs font-medium">Fetch
+                                API / AJAX</span>
+                            <span
+                                class="px-3 py-1.5 rounded-full bg-surface-highlight border border-white/5 text-slate-300 text-xs font-medium">Bootstrap</span>
+                            <span
+                                class="px-3 py-1.5 rounded-full bg-surface-highlight border border-white/5 text-slate-300 text-xs font-medium">Tailwind</span>
+                            <span
+                                class="px-3 py-1.5 rounded-full bg-surface-highlight border border-white/5 text-slate-300 text-xs font-medium">Responsive
+                                Design</span>
+                        </div>
+                    </div>
+
+                    <div
+                        class="group p-6 rounded-xl bg-surface-dark border border-white/5 hover:border-primary/50 transition-all duration-300 hover:-translate-y-1 shadow-lg hover:shadow-glow-hover">
+                        <div
+                            class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
+                            <span class="material-icons-outlined text-primary text-2xl">build</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-4">Tools</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span
+                                class="px-3 py-1.5 rounded-full bg-surface-highlight border border-white/5 text-slate-300 text-xs font-medium">Git/GitHub</span>
+                            <span
+                                class="px-3 py-1.5 rounded-full bg-surface-highlight border border-white/5 text-slate-300 text-xs font-medium">Visual
+                                Studio</span>
+                            <span
+                                class="px-3 py-1.5 rounded-full bg-surface-highlight border border-white/5 text-slate-300 text-xs font-medium">VS
+                                Code</span>
+                            <span
+                                class="px-3 py-1.5 rounded-full bg-surface-highlight border border-white/5 text-slate-300 text-xs font-medium">Manejo
+                                de tickets</span>
+                            <span
+                                class="px-3 py-1.5 rounded-full bg-surface-highlight border border-white/5 text-slate-300 text-xs font-medium">Deploy
+                                en hosting web (Somes)</span>
+                            <span
+                                class="px-3 py-1.5 rounded-full bg-surface-highlight border border-white/5 text-slate-300 text-xs font-medium">Deploy
+                                en Windows Server 2016</span>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- a que me dedico -->
+        <section class="relative z-10 py-24 px-6" id="services">
+            <div class="max-w-7xl mx-auto">
+                <div class="mb-16 md:mb-20 text-center">
+                    <span
+                        class="inline-block py-1 px-3 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-semibold tracking-wider uppercase mb-4">
+                        A qué me dedico
+                    </span>
+                    <h2 class="text-4xl md:text-5xl font-extrabold text-white tracking-tight mb-4">
+                        En qué puedo ayudarte
+                    </h2>
+                    <p class="text-lg text-slate-400 max-w-2xl mx-auto leading-relaxed">
+                        Desarrollo aplicaciones web completas, desde la base de datos hasta la interfaz, aplicando
+                        buenas prácticas y arquitectura en capas.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+                    <div
+                        class="group relative p-8 rounded-xl bg-surface-dark border border-white/5 hover:border-primary/50 transition-all duration-300 hover:-translate-y-1 shadow-lg hover:shadow-glow-hover overflow-hidden">
+                        <div class="absolute top-0 right-0 p-8 opacity-5 group-hover:opacity-10 transition-opacity">
+                            <span
+                                class="material-icons-outlined text-9xl text-primary transform rotate-12 translate-x-4 -translate-y-4">code</span>
+                        </div>
+                        <div
+                            class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
+                            <span class="material-icons-outlined text-primary text-2xl">web</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3 group-hover:text-primary transition-colors">ASP.NET
+                            Web Apps</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                            Desarrollo aplicaciones web utilizando C# y .NET (MVC / Razor), conectadas a base de datos y
+                            con interfaces responsive. Trabajo con manejo de formularios, validaciones, CRUD completos y
+                            organización por capas.
+                        </p>
+                    </div>
+
+                    <div
+                        class="group relative p-8 rounded-xl bg-surface-dark border border-white/5 hover:border-primary/50 transition-all duration-300 hover:-translate-y-1 shadow-lg hover:shadow-glow-hover overflow-hidden">
+                        <div class="absolute top-0 right-0 p-8 opacity-5 group-hover:opacity-10 transition-opacity">
+                            <span
+                                class="material-icons-outlined text-9xl text-primary transform rotate-12 translate-x-4 -translate-y-4">api</span>
+                        </div>
+                        <div
+                            class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
+                            <span class="material-icons-outlined text-primary text-2xl">api</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3 group-hover:text-primary transition-colors">RESTful
+                            API Design</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                            Implementación y consumo de APIs para intercambio de datos entre aplicaciones. Uso de Web
+                            API, JSON, pruebas con Postman y peticiones mediante Fetch / AJAX desde el frontend.
+                        </p>
+                    </div>
+
+                    <div
+                        class="group relative p-8 rounded-xl bg-surface-dark border border-white/5 hover:border-primary/50 transition-all duration-300 hover:-translate-y-1 shadow-lg hover:shadow-glow-hover overflow-hidden">
+                        <div class="absolute top-0 right-0 p-8 opacity-5 group-hover:opacity-10 transition-opacity">
+                            <span
+                                class="material-icons-outlined text-9xl text-primary transform rotate-12 translate-x-4 -translate-y-4">cloud_queue</span>
+                        </div>
+                        <div
+                            class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
+                            <span class="material-icons-outlined text-primary text-2xl">cloud</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3 group-hover:text-primary transition-colors">
+                            Publicación y Deploy</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                            Publicación de aplicaciones web en entornos reales. Configuración de IIS, deploy en hosting
+                            y pruebas de funcionamiento en producción, incluyendo despliegues en Windows Server.
+                        </p>
+                    </div>
+
+                    <div
+                        class="group relative p-8 rounded-xl bg-surface-dark border border-white/5 hover:border-primary/50 transition-all duration-300 hover:-translate-y-1 shadow-lg hover:shadow-glow-hover overflow-hidden">
+                        <div class="absolute top-0 right-0 p-8 opacity-5 group-hover:opacity-10 transition-opacity">
+                            <span
+                                class="material-icons-outlined text-9xl text-primary transform rotate-12 translate-x-4 -translate-y-4">storage</span>
+                        </div>
+                        <div
+                            class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
+                            <span class="material-icons-outlined text-primary text-2xl">storage</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3 group-hover:text-primary transition-colors">
+                            Database Optimization</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                            Diseño y manejo de bases de datos SQL Server y MySQL. Consultas, Stored Procedures,
+                            relaciones entre tablas y uso de Entity Framework para acceso a datos desde la aplicación.
+                        </p>
+                    </div>
+
+                    <div
+                        class="group relative p-8 rounded-xl bg-surface-dark border border-white/5 hover:border-primary/50 transition-all duration-300 hover:-translate-y-1 shadow-lg hover:shadow-glow-hover overflow-hidden">
+                        <div class="absolute top-0 right-0 p-8 opacity-5 group-hover:opacity-10 transition-opacity">
+                            <span
+                                class="material-icons-outlined text-9xl text-primary transform rotate-12 translate-x-4 -translate-y-4">security</span>
+                        </div>
+                        <div
+                            class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
+                            <span class="material-icons-outlined text-primary text-2xl">verified_user</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3 group-hover:text-primary transition-colors">
+                            Identity &amp; Security</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                            Implementación de autenticación y registro de usuarios utilizando ASP.NET Identity, manejo
+                            de sesiones, roles y protección de acceso a distintas secciones del sistema.
+                        </p>
+                    </div>
+
+                    <div
+                        class="group relative p-8 rounded-xl bg-gradient-to-br from-surface-dark to-slate-900 border border-white/5 flex flex-col justify-center items-center text-center hover:border-primary/30 transition-all duration-300">
+                        <div
+                            class="w-16 h-16 rounded-full bg-primary/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 shadow-[0_0_20px_-5px_rgba(25,121,204,0.4)]">
+                            <span class="material-icons-outlined text-primary text-3xl">add</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-2">¿Tenés una consulta o propuesta?</h3>
+                        <p class="text-slate-400 text-sm mb-6">Si querés ver más sobre mis proyectos o ponerte en
+                            contacto conmigo, podés escribirme sin problema.</p>
+                        <a class="px-6 py-2 rounded-full border border-primary text-primary hover:bg-primary hover:text-white transition-all text-sm font-semibold"
+                            href="#contact">
+                            Contactarme
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROYECTOS -->
+        <section class="relative z-10 py-24 px-6 bg-surface-dark/30" id="projects">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center mb-12">
+                    <span
+                        class="inline-block py-1 px-3 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-semibold tracking-wider uppercase mb-4">Portfolio</span>
+                    <h2 class="text-4xl font-extrabold text-white tracking-tight mb-4">Proyectos</h2>
+
+
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                    <!-- PROYECTO TEXCOM -->
+                    <div
+                        class="group relative rounded-xl overflow-hidden bg-surface-dark border border-white/5 hover:border-white/10 transition-all">
+                        <div class="h-48 w-full bg-slate-800 relative overflow-hidden">
+                            <div class="absolute inset-0 bg-gradient-to-t from-surface-dark to-transparent z-10"></div>
+                            <div class="w-full h-full bg-slate-700 flex items-center justify-center text-slate-500">
+                                <img src="../assets/img/projects/proyecto_CPR/LoginNuevo.jpg" alt="Proyecto 3"
+                                    class="material-icons-outlined text-5xl">
+                            </div>
+                        </div>
+                        <div class="p-6 relative z-20 -mt-10">
+                            <div
+                                class="inline-flex items-center gap-1 px-2 py-1 rounded bg-accent-green/20 text-accent-green text-xs font-bold mb-3 border border-accent-green/20">
+                                Texcom
+                            </div>
+
+                            <h3 class="text-xl font-bold text-white mb-2 group-hover:text-primary transition-colors">
+                                Sistema CPR – Texcom (Migración Desktop a Web MVC)
+                            </h3>
+
+                            <p class="text-slate-400 text-sm mb-4 line-clamp-2">
+                                Participación en la migración de un sistema interno empresarial desde aplicación de
+                                escritorio a ASP.NET MVC.
+                                Desarrollo de vistas y funcionalidades para el seguimiento de rollos de tela, stock y
+                                procesos productivos,
+                                trabajando con SQL Server y reutilización de componentes mediante Partial Views y
+                                ViewModels.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-6">
+
+                                <span class="text-xs text-slate-500 bg-black/20 px-2 py-1 rounded">C#</span>
+                                <span class="text-xs text-slate-500 bg-black/20 px-2 py-1 rounded">.NET Framework</span>
+                                <span class="text-xs text-slate-500 bg-black/20 px-2 py-1 rounded">ASP.NET MVC</span>
+                                <span class="text-xs text-slate-500 bg-black/20 px-2 py-1 rounded">Razor Views</span>
+                                <span class="text-xs text-slate-500 bg-black/20 px-2 py-1 rounded">ViewModels</span>
+                                <span class="text-xs text-slate-500 bg-black/20 px-2 py-1 rounded">Partial Views</span>
+                                <span class="text-xs text-slate-500 bg-black/20 px-2 py-1 rounded">SQL Server</span>
+                                <span class="text-xs text-slate-500 bg-black/20 px-2 py-1 rounded">Stored
+                                    Procedures</span>
+                                <span class="text-xs text-slate-500 bg-black/20 px-2 py-1 rounded">ADO.NET</span>
+                                <span class="text-xs text-slate-500 bg-black/20 px-2 py-1 rounded">Arquitectura en
+                                    Capas</span>
+
+                            </div>
+                            <div class="flex gap-3">
+                                <a class="text-sm font-medium text-white hover:text-primary flex items-center gap-1"
+                                    href="texcom-cpr-system-migration.html">
+                                    Ver detalles <span class="material-icons-outlined text-base">arrow_forward</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- PROYECTO 1 -->
+
+                    <div
+                        class="group relative rounded-xl overflow-hidden bg-surface-dark border border-white/5 hover:border-white/10 transition-all">
+                        <div class="h-48 w-full bg-slate-800 relative overflow-hidden">
+                            <div class="absolute inset-0 bg-gradient-to-t from-surface-dark to-transparent z-10"></div>
+                            <div class="w-full h-full bg-slate-700 flex items-center justify-center text-slate-500">
+                                <img src="../assets/img/projects/proyecto_3/Home.jpg" alt="Proyecto 3"
+                                    class="material-icons-outlined text-5xl">
+                            </div>
+                        </div>
+                        <div class="p-6 relative z-20 -mt-10">
+                            <div
+                                class="inline-flex items-center gap-1 px-2 py-1 rounded bg-accent-green/20 text-accent-green text-xs font-bold mb-3 border border-accent-green/20">
+                                Terminado
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-2 group-hover:text-primary transition-colors">
+                                Plataforma de Reseñas de Películas</h3>
+                            <p class="text-slate-400 text-sm mb-4 line-clamp-2">
+                                Aplicación web de reseñas de películas con registro e inicio de sesión de usuarios,
+                                creación de opiniones y gestión de contenido. Desarrollada con ASP.NET MVC, Entity
+                                Framework e Identity, incorporando además asistencia mediante IA para la generación de
+                                reseñas.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="text-xs text-slate-500 bg-black/20 px-2 py-1 rounded">ASP.NET MVC</span>
+                                <span class="text-xs text-slate-500 bg-black/20 px-2 py-1 rounded">C#</span>
+                                <span class="text-xs text-slate-500 bg-black/20 px-2 py-1 rounded">Entity
+                                    Framework</span>
+                                <span class="text-xs text-slate-500 bg-black/20 px-2 py-1 rounded">SQL Server</span>
+                                <span class="text-xs text-slate-500 bg-black/20 px-2 py-1 rounded">Identity</span>
+                                <span class="text-xs text-slate-500 bg-black/20 px-2 py-1 rounded">JavaScript</span>
+                                <span class="text-xs text-slate-500 bg-black/20 px-2 py-1 rounded">HTML/CSS</span>
+                                <span class="text-xs text-slate-500 bg-black/20 px-2 py-1 rounded">API REST</span>
+                                <span class="text-xs text-slate-500 bg-black/20 px-2 py-1 rounded">OpenAI API
+                                    (IA)</span>
+                            </div>
+                            <div class="flex gap-3">
+                                <a class="text-sm font-medium text-white hover:text-primary flex items-center gap-1"
+                                    href="movie-reviews.html">
+                                    Ver detalles <span class="material-icons-outlined text-base">arrow_forward</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- PROYECTO 2 -->
+                    <div
+                        class="group relative rounded-xl overflow-hidden bg-surface-dark border border-white/5 hover:border-white/10 transition-all">
+                        <div class="h-48 w-full bg-slate-800 relative overflow-hidden">
+                            <div class="absolute inset-0 bg-gradient-to-t from-surface-dark to-transparent z-10"></div>
+                            <div class="w-full h-full bg-slate-700 flex items-center justify-center text-slate-500">
+                                <img src="../assets/img/projects/proyecto_2/Home.jpg" alt="Proyecto 3"
+                                    class="material-icons-outlined text-5xl">
+                            </div>
+                        </div>
+                        <div class="p-6 relative z-20 -mt-10">
+                            <div
+                                class="inline-flex items-center gap-1 px-2 py-1 rounded bg-primary/20 text-primary text-xs font-bold mb-3 border border-primary/20">
+                                <span class="w-1.5 h-1.5 rounded-full bg-accent-green"></span> En línea
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-2 group-hover:text-primary transition-colors">
+                                E-Commerce</h3>
+                            <p class="text-slate-400 text-sm mb-4 line-clamp-2">
+                                Aplicación web para la gestión de productos, con altas, bajas y modificaciones,
+                                conectada a base de datos y validaciones de usuario.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="text-xs text-slate-500 bg-black/20 px-2 py-1 rounded">C#</span>
+                                <span class="text-xs text-slate-500 bg-black/20 px-2 py-1 rounded">ASP.NET
+                                    WebForms</span>
+                                <span class="text-xs text-slate-500 bg-black/20 px-2 py-1 rounded">SQL Server</span>
+                                <span class="text-xs text-slate-500 bg-black/20 px-2 py-1 rounded">ADO.NET</span>
+                                <span class="text-xs text-slate-500 bg-black/20 px-2 py-1 rounded">Arquitectura en
+                                    capas</span>
+                                <span class="text-xs text-slate-500 bg-black/20 px-2 py-1 rounded">HTML</span>
+                                <span class="text-xs text-slate-500 bg-black/20 px-2 py-1 rounded">CSS</span>
+                                <span class="text-xs text-slate-500 bg-black/20 px-2 py-1 rounded">JavaScript</span>
+                                <span class="text-xs text-slate-500 bg-black/20 px-2 py-1 rounded">Deploy en hosting
+                                    web</span>
+                            </div>
+                            <div class="flex gap-3">
+                                <a class="text-sm font-medium text-white hover:text-primary flex items-center gap-1"
+                                    href="ecommerce-webforms.html">
+                                    Ver detalles <span class="material-icons-outlined text-base">arrow_forward</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- PROYECTO 3 -->
+                    <div
+                        class="group relative rounded-xl overflow-hidden bg-surface-dark border border-white/5 hover:border-white/10 transition-all">
+                        <div class="h-48 w-full bg-slate-800 relative overflow-hidden">
+                            <div class="absolute inset-0 bg-gradient-to-t from-surface-dark to-transparent z-10"></div>
+                            <div class="w-full h-full bg-slate-700 flex items-center justify-center text-slate-500">
+                                <img src="../assets/img/projects/proyecto_1/Home.jpg" alt="Proyecto 3"
+                                    class="material-icons-outlined text-5xl">
+                            </div>
+                        </div>
+                        <div class="p-6 relative z-20 -mt-10">
+                            <div
+                                class="inline-flex items-center gap-1 px-2 py-1 rounded bg-accent-green/20 text-accent-green text-xs font-bold mb-3 border border-accent-green/20">
+                                Terminado
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-2 group-hover:text-primary transition-colors">
+                                Sistema de Gestión de Artículos (Desktop)</h3>
+                            <p class="text-slate-400 text-sm mb-4 line-clamp-2">
+                                Aplicación de escritorio desarrollada en C# con Windows Forms para la gestión de
+                                artículos. Permite alta, baja y modificación de registros conectados a base de datos,
+                                aplicando programación orientada a objetos y separación por capas.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="text-xs text-slate-500 bg-black/20 px-2 py-1 rounded">C#</span>
+                                <span class="text-xs text-slate-500 bg-black/20 px-2 py-1 rounded">.NET Framework</span>
+                                <span class="text-xs text-slate-500 bg-black/20 px-2 py-1 rounded">WinForms</span>
+                                <span class="text-xs text-slate-500 bg-black/20 px-2 py-1 rounded">SQL Server</span>
+                                <span class="text-xs text-slate-500 bg-black/20 px-2 py-1 rounded">ADO.NET</span>
+                                <span class="text-xs text-slate-500 bg-black/20 px-2 py-1 rounded">POO</span>
+                                <span class="text-xs text-slate-500 bg-black/20 px-2 py-1 rounded">Arquitectura en
+                                    capas</span>
+
+                            </div>
+                            <div class="flex gap-3">
+                                <a class="text-sm font-medium text-white hover:text-primary flex items-center gap-1"
+                                    href="desktop-inventory-app.html">
+                                    Ver detalles <span class="material-icons-outlined text-base">arrow_forward</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+        </section>
+
+        <!-- EXPERIENCIAS Y FORMACION -->
+        <section class="relative z-10 py-24 px-6" id="experience">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-16">
+                    <span
+                        class="inline-block py-1 px-3 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-semibold tracking-wider uppercase mb-4">
+                        Formación y experiencia
+                    </span>
+                    <h2 class="text-4xl font-extrabold text-white tracking-tight">Experiencia & Educación</h2>
+                </div>
+
+                <div
+                    class="space-y-12 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-white/10 before:to-transparent">
+
+                    <!-- 1) FACULTAD NUEVA IEA  -->
+                    <div
+                        class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+                        <div
+                            class="flex items-center justify-center w-10 h-10 rounded-full border border-white/10 bg-surface-dark shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10 group-hover:border-primary transition-colors">
+                            <span class="material-icons-outlined text-slate-500 text-sm">school</span>
+                        </div>
+
+                        <div
+                            class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-surface-dark p-6 rounded-xl border border-white/5 hover:border-white/10 transition-all shadow-md">
+                            <div class="flex flex-wrap items-start justify-between gap-2 mb-2">
+                                <h3 class="font-bold text-white text-lg">Ciencia de Datos e Inteligencia Artificial</h3>
+                                <span
+                                    class="text-xs font-semibold text-accent-green bg-accent-green/10 px-2 py-1 rounded whitespace-nowrap shrink-0 leading-none">
+                                    Mar 2026 - En curso
+                                </span>
+                            </div>
+
+                            <div class="text-primary text-sm font-medium mb-3">Instituto IEA</div>
+
+                            <p class="text-slate-400 text-sm leading-relaxed">
+                                Formación orientada a análisis de datos y fundamentos de IA, con foco en transformar
+                                información en soluciones y toma de decisiones.
+                                Modalidad online con clases grabadas y encuentros en vivo.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- 2) MaxiPrograma - Nivel 4 -->
+                    <div
+                        class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+                        <div
+                            class="flex items-center justify-center w-10 h-10 rounded-full border border-white/10 bg-surface-dark shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10 group-hover:border-primary transition-colors">
+                            <span class="material-icons-outlined text-slate-500 text-sm">school</span>
+                        </div>
+
+                        <div
+                            class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-surface-dark p-6 rounded-xl border border-white/5 hover:border-white/10 transition-all shadow-md">
+                            <div class="flex flex-wrap items-start justify-between gap-2 mb-2">
+                                <h3 class="font-bold text-white text-lg">Curso C# Nivel 4 (ASP.NET MVC + Entity
+                                    Framework)</h3>
+                                <span
+                                    class="text-xs font-semibold text-slate-500 bg-white/5 px-2 py-1 rounded whitespace-nowrap shrink-0 leading-none">
+                                    Dic 2025 - Ene 2026
+                                </span>
+                            </div>
+
+                            <div class="text-primary text-sm font-medium mb-3">MaxiPrograma</div>
+
+                            <p class="text-slate-400 text-sm leading-relaxed">
+                                Desarrollo web con MVC y Entity Framework: CRUD, relaciones, validaciones, autenticación
+                                con Identity y estructura de proyecto aplicando buenas prácticas.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- 3) MaxiPrograma - Nivel 3 -->
+                    <div
+                        class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+                        <div
+                            class="flex items-center justify-center w-10 h-10 rounded-full border border-white/10 bg-surface-dark shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10 group-hover:border-primary transition-colors">
+                            <span class="material-icons-outlined text-slate-500 text-sm">school</span>
+                        </div>
+
+                        <div
+                            class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-surface-dark p-6 rounded-xl border border-white/5 hover:border-white/10 transition-all shadow-md">
+                            <div class="flex flex-wrap items-start justify-between gap-2 mb-2">
+                                <h3 class="font-bold text-white text-lg">Curso C# Nivel 3 (.NET / WebForms)</h3>
+                                <span
+                                    class="text-xs font-semibold text-slate-500 bg-white/5 px-2 py-1 rounded whitespace-nowrap shrink-0 leading-none">
+                                    Sept 2025 - Dic 2025
+                                </span>
+                            </div>
+
+                            <div class="text-primary text-sm font-medium mb-3">MaxiPrograma</div>
+
+                            <p class="text-slate-400 text-sm leading-relaxed">
+                                Desarrollo web con .NET y WebForms, conexión a base de datos, arquitectura en capas y
+                                prácticas de implementación orientadas a aplicaciones reales.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- 4) MaxiPrograma - Nivel 2 -->
+                    <div
+                        class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+                        <div
+                            class="flex items-center justify-center w-10 h-10 rounded-full border border-white/10 bg-surface-dark shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10 group-hover:border-primary transition-colors">
+                            <span class="material-icons-outlined text-slate-500 text-sm">school</span>
+                        </div>
+
+                        <div
+                            class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-surface-dark p-6 rounded-xl border border-white/5 hover:border-white/10 transition-all shadow-md">
+                            <div class="flex flex-wrap items-start justify-between gap-2 mb-2">
+                                <h3 class="font-bold text-white text-lg">Curso C# Nivel 2 (.NET + SQL)</h3>
+                                <span
+                                    class="text-xs font-semibold text-slate-500 bg-white/5 px-2 py-1 rounded whitespace-nowrap shrink-0 leading-none">
+                                    Ago 2025 - Sept 2025
+                                </span>
+                            </div>
+
+                            <div class="text-primary text-sm font-medium mb-3">MaxiPrograma</div>
+
+                            <p class="text-slate-400 text-sm leading-relaxed">
+                                Fundamentos de .NET, POO y base de datos: creación de aplicaciones, consultas SQL y
+                                prácticas iniciales de desarrollo con enfoque en proyectos.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- 5) Inglés -->
+                    <div
+                        class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+                        <div
+                            class="flex items-center justify-center w-10 h-10 rounded-full border border-white/10 bg-surface-dark shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10 group-hover:border-primary transition-colors">
+                            <span class="material-icons-outlined text-slate-500 text-sm">translate</span>
+                        </div>
+
+                        <div
+                            class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-surface-dark p-6 rounded-xl border border-white/5 hover:border-white/10 transition-all shadow-md">
+                            <div class="flex flex-wrap items-start justify-between gap-2 mb-2">
+                                <h3 class="font-bold text-white text-lg">Inglés básico (A1)</h3>
+                                <span
+                                    class="text-xs font-semibold text-slate-500 bg-white/5 px-2 py-1 rounded whitespace-nowrap shrink-0 leading-none">
+                                    Ene 2025 - Dic 2025
+                                </span>
+                            </div>
+
+                            <div class="text-primary text-sm font-medium mb-3">LEA Institute</div>
+
+                            <p class="text-slate-400 text-sm leading-relaxed">
+                                Formación en inglés con foco en comprensión, lectura técnica y vocabulario aplicado al
+                                área IT.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- 6) Experiencia - Texcom -->
+                    <div
+                        class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+                        <div
+                            class="flex items-center justify-center w-10 h-10 rounded-full border border-white/10 bg-surface-dark shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10 group-hover:border-primary transition-colors">
+                            <span class="material-icons-outlined text-primary text-sm">work</span>
+                        </div>
+
+                        <div
+                            class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-surface-dark p-6 rounded-xl border border-white/5 hover:border-white/10 transition-all shadow-md">
+                            <div class="flex flex-wrap items-start justify-between gap-2 mb-2">
+                                <h3 class="font-bold text-white text-lg">Analista de Sistemas / Soporte IT</h3>
+                                <span
+                                    class="text-xs font-semibold text-slate-500 bg-white/5 px-2 py-1 rounded whitespace-nowrap shrink-0 leading-none">
+                                    Sept 2022 - Ago 2025
+                                </span>
+                            </div>
+
+                            <div class="text-primary text-sm font-medium mb-3">Texcom — Área de Sistemas</div>
+
+                            <p class="text-slate-400 text-sm leading-relaxed">
+                                Soporte y mantenimiento de sistemas internos y aplicaciones de escritorio y web.
+                                Participación en migración de una aplicación interna desde Visual Basic a .NET,
+                                colaborando en el desarrollo de vistas y funcionalidades.
+                                Desarrollo de pantallas para un sistema interno de seguimiento (lectura por código de
+                                barras), validaciones y consultas a SQL Server.
+                                Trabajo con Stored Procedures, incidencias y pruebas funcionales junto a usuarios y
+                                desarrolladores.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- 7) Pasantía - Texcom -->
+                    <div
+                        class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+                        <div
+                            class="flex items-center justify-center w-10 h-10 rounded-full border border-white/10 bg-surface-dark shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10 group-hover:border-primary transition-colors">
+                            <span class="material-icons-outlined text-slate-500 text-sm">work</span>
+                        </div>
+
+                        <div
+                            class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-surface-dark p-6 rounded-xl border border-white/5 hover:border-white/10 transition-all shadow-md">
+                            <div class="flex flex-wrap items-start justify-between gap-2 mb-2">
+                                <h3 class="font-bold text-white text-lg">Pasante en Sistemas</h3>
+                                <span
+                                    class="text-xs font-semibold text-slate-500 bg-white/5 px-2 py-1 rounded whitespace-nowrap shrink-0 leading-none">
+                                    Sept 2022 - Feb 2023
+                                </span>
+                            </div>
+
+                            <div class="text-primary text-sm font-medium mb-3">Texcom — Área de Sistemas</div>
+
+                            <p class="text-slate-400 text-sm leading-relaxed">
+                                Soporte a usuarios, asistencia en tareas de sistemas y acompañamiento en procesos
+                                internos del área.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- 8) UTN -->
+                    <div
+                        class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+                        <div
+                            class="flex items-center justify-center w-10 h-10 rounded-full border border-white/10 bg-surface-dark shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10 group-hover:border-primary transition-colors">
+                            <span class="material-icons-outlined text-slate-500 text-sm">school</span>
+                        </div>
+
+                        <div
+                            class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-surface-dark p-6 rounded-xl border border-white/5 hover:border-white/10 transition-all shadow-md">
+                            <div class="flex flex-wrap items-start justify-between gap-2 mb-2">
+                                <h3 class="font-bold text-white text-lg">Técnico Superior en Programación</h3>
+                                <span
+                                    class="text-xs font-semibold text-slate-500 bg-white/5 px-2 py-1 rounded whitespace-nowrap shrink-0 leading-none">
+                                    2020 - 2025
+                                </span>
+                            </div>
+
+                            <div class="text-primary text-sm font-medium mb-3">Universidad Tecnológica Nacional (UTN)
+                            </div>
+
+                            <p class="text-slate-400 text-sm leading-relaxed">
+                                Formación en desarrollo de software, POO, lógica y bases de datos. Trabajo con C#, Java
+                                y C++,
+                                aplicando buenas prácticas y arquitectura en capas en proyectos académicos.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+
+
+        <!-- CONTACTO -->
+        <section class="relative z-10 py-24 px-6 bg-gradient-to-b from-background-dark to-surface-dark/50" id="contact">
+            <div
+                class="max-w-5xl mx-auto bg-surface-dark border border-white/5 rounded-2xl p-8 md:p-12 shadow-2xl relative overflow-hidden">
+                <div
+                    class="absolute top-0 right-0 w-[300px] h-[300px] bg-primary/10 rounded-full blur-[100px] pointer-events-none mix-blend-screen">
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-16 relative z-10">
+                    <!-- Columna izquierda -->
+                    <div class="lg:col-span-2 flex flex-col justify-center">
+                        <div>
+                            <span
+                                class="inline-block text-primary font-bold tracking-widest text-xs uppercase mb-4">Contacto</span>
+                            <h2 class="text-4xl md:text-5xl font-extrabold text-white tracking-tight mb-6">Conectemos
+                            </h2>
+
+                            <p class="text-slate-400 text-lg leading-relaxed mb-8">
+                                Estoy disponible para nuevas oportunidades y proyectos. Si querés contactarme, acá tenés
+                                mis datos.
+                            </p>
+
+                            <div
+                                class="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-accent-green/10 border border-accent-green/20">
+                                <span class="relative flex h-3 w-3">
+                                    <span
+                                        class="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent-green opacity-75"></span>
+                                    <span class="relative inline-flex rounded-full h-3 w-3 bg-accent-green"></span>
+                                </span>
+                                <span
+                                    class="text-accent-green text-sm font-semibold tracking-wide uppercase">Disponible</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Columna derecha -->
+                    <div class="lg:col-span-3">
+                        <div class="flex flex-col space-y-4">
+                            <!-- Email -->
+                            <a class="group flex items-center gap-6 p-4 rounded-xl border border-white/5 bg-background-dark/50 hover:border-primary/50 hover:bg-surface-highlight transition-all duration-300"
+                                href="mailto:TU_MAIL_AQUI">
+                                <div
+                                    class="w-12 h-12 rounded-lg bg-surface-dark border border-white/5 flex items-center justify-center shrink-0 group-hover:border-primary/30 transition-colors">
+                                    <span
+                                        class="material-icons-outlined text-primary text-2xl group-hover:scale-110 transition-transform">email</span>
+                                </div>
+                                <div class="flex-1 min-w-0">
+                                    <p class="text-xs text-slate-500 uppercase tracking-wider font-semibold mb-0.5">
+                                        Email</p>
+                                    <p class="text-white font-medium truncate">f1gabriel_bettiga@outlook.es</p>
+                                </div>
+                                <div
+                                    class="text-primary opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all duration-300">
+                                    <span class="material-icons-outlined">arrow_forward</span>
+                                </div>
+                            </a>
+
+                            <!-- WhatsApp / Tel -->
+                            <a class="group flex items-center gap-6 p-4 rounded-xl border border-white/5 bg-background-dark/50 hover:border-primary/50 hover:bg-surface-highlight transition-all duration-300"
+                                href="tel:TU_TELEFONO_AQUI">
+                                <div
+                                    class="w-12 h-12 rounded-lg bg-surface-dark border border-white/5 flex items-center justify-center shrink-0 group-hover:border-primary/30 transition-colors">
+                                    <span
+                                        class="material-icons-outlined text-primary text-2xl group-hover:scale-110 transition-transform">chat</span>
+                                </div>
+                                <div class="flex-1 min-w-0">
+                                    <p class="text-xs text-slate-500 uppercase tracking-wider font-semibold mb-0.5">
+                                        WhatsApp / Teléfono</p>
+                                    <p class="text-white font-medium truncate">+54 9 114917-7021</p>
+                                </div>
+                                <div
+                                    class="text-primary opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all duration-300">
+                                    <span class="material-icons-outlined">arrow_forward</span>
+                                </div>
+                            </a>
+
+                            <!-- LinkedIn -->
+                            <a class="group flex items-center gap-6 p-4 rounded-xl border border-white/5 bg-background-dark/50 hover:border-primary/50 hover:bg-surface-highlight transition-all duration-300"
+                                href="https://www.linkedin.com/in/gustavo-bettiga/" target="_blank" rel="noopener">
+                                <div
+                                    class="w-12 h-12 rounded-lg bg-surface-dark border border-white/5 flex items-center justify-center shrink-0 group-hover:border-primary/30 transition-colors">
+                                    <span
+                                        class="material-icons-outlined text-primary text-2xl group-hover:scale-110 transition-transform">work</span>
+                                </div>
+                                <div class="flex-1 min-w-0">
+                                    <p class="text-xs text-slate-500 uppercase tracking-wider font-semibold mb-0.5">
+                                        LinkedIn</p>
+                                    <p class="text-white font-medium truncate">www.linkedin.com/in/gustavo-bettiga</p>
+                                </div>
+                                <div
+                                    class="text-primary opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all duration-300">
+                                    <span class="material-icons-outlined">arrow_forward</span>
+                                </div>
+                            </a>
+
+                            <!-- GitHub -->
+                            <a class="group flex items-center gap-6 p-4 rounded-xl border border-white/5 bg-background-dark/50 hover:border-primary/50 hover:bg-surface-highlight transition-all duration-300"
+                                href="https://github.com/F1GabrielBettiga" target="_blank" rel="noopener">
+                                <div
+                                    class="w-12 h-12 rounded-lg bg-surface-dark border border-white/5 flex items-center justify-center shrink-0 group-hover:border-primary/30 transition-colors">
+                                    <span
+                                        class="material-icons-outlined text-primary text-2xl group-hover:scale-110 transition-transform">code</span>
+                                </div>
+                                <div class="flex-1 min-w-0">
+                                    <p class="text-xs text-slate-500 uppercase tracking-wider font-semibold mb-0.5">
+                                        GitHub</p>
+                                    <p class="text-white font-medium truncate">https://github.com/F1GabrielBettiga</p>
+                                </div>
+                                <div
+                                    class="text-primary opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all duration-300">
+                                    <span class="material-icons-outlined">arrow_forward</span>
+                                </div>
+                            </a>
+
+                            <!-- Ubicación -->
+                            <div
+                                class="group flex items-center gap-6 p-4 rounded-xl border border-white/5 bg-background-dark/50 hover:border-white/10 transition-all duration-300">
+                                <div
+                                    class="w-12 h-12 rounded-lg bg-surface-dark border border-white/5 flex items-center justify-center shrink-0">
+                                    <span class="material-icons-outlined text-slate-400 text-2xl">location_on</span>
+                                </div>
+                                <div class="flex-1 min-w-0">
+                                    <p class="text-xs text-slate-500 uppercase tracking-wider font-semibold mb-0.5">
+                                        Ubicación</p>
+                                    <p class="text-white font-medium truncate">Argentina</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Botones -->
+                        <div class="mt-8 flex flex-col sm:flex-row gap-4 pt-4 border-t border-white/5">
+                            <a href="../assets/cv/CV - Bettiga Gustavo Gabriel .pdf" download="Gabriel_Bettiga_CV.pdf"
+                                class="flex-1 inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-lg bg-accent-red hover:bg-red-600 text-white font-bold text-base transition-all shadow-[0_0_20px_-5px_rgba(239,68,68,0.4)] hover:shadow-[0_0_25px_-5px_rgba(239,68,68,0.6)] hover:-translate-y-0.5">
+                                <span class="material-icons-outlined">download</span>
+                                Descargar CV
+                            </a>
+
+                            <a class="flex-1 inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-lg border border-white/10 hover:bg-white/5 text-white font-bold text-base transition-all group hover:-translate-y-0.5"
+                                href="https://www.linkedin.com/in/gustavo-bettiga/" target="_blank" rel="noopener">
+                                Ir a LinkedIn
+                                <span
+                                    class="material-icons-outlined text-sm transition-transform group-hover:translate-x-1">arrow_forward</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- FOOTER -->
+        <footer class="py-8 border-t border-white/5 bg-background-dark text-center relative z-10">
+            <p class="text-slate-500 text-sm">© 2026 Porfolio Gabriel Bettiga.</p>
+        </footer>
+    </div>
+</body>
+
+</html>
