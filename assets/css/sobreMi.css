@@ -1,0 +1,224 @@
+.seccion-sobre-mi {
+    width: 100%;
+    padding: 5rem 1.5rem;
+    position: relative;
+}
+
+.contenedor-sobre-mi {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 2rem;
+    align-items: start;
+}
+
+.tarjeta-sobre-mi,
+.tarjeta-tecnologias {
+    position: relative;
+    overflow: hidden;
+
+    background: rgba(18, 28, 37, 0.72);
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    border-radius: 1.5rem;
+
+    backdrop-filter: blur(16px);
+    box-shadow: 0 22px 60px rgba(0, 0, 0, 0.28);
+}
+
+.tarjeta-sobre-mi {
+    padding: 3rem;
+}
+
+.tarjeta-tecnologias {
+    padding: 2rem;
+}
+
+.icono-fondo-sobre-mi {
+    position: absolute;
+    top: 1.8rem;
+    right: 2rem;
+    opacity: 0.08;
+    pointer-events: none;
+}
+
+.icono-fondo-sobre-mi .material-symbols-outlined {
+    font-size: 6rem;
+    color: #e2e2e3;
+}
+
+.titulo-sobre-mi {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+}
+
+.subtitulo-sobre-mi {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #00dbe9;
+    margin-bottom: 2rem;
+}
+
+.texto-sobre-mi {
+    color: #b9cacb;
+    font-size: 1.05rem;
+    line-height: 1.75;
+}
+
+.texto-sobre-mi p {
+    margin-bottom: 1.25rem;
+}
+
+.datos-sobre-mi {
+    margin-top: 2.5rem;
+    padding-top: 2rem;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.dato-sobre-mi {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.dato-icono {
+    width: 42px;
+    height: 42px;
+    border-radius: 0.75rem;
+
+    background: rgba(0, 219, 233, 0.10);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dato-icono .material-symbols-outlined {
+    color: #00dbe9;
+}
+
+.dato-label {
+    margin: 0;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-weight: 800;
+    color: rgba(185, 202, 203, 0.65);
+}
+
+.dato-valor {
+    margin: 0.25rem 0 0;
+    color: #e2e2e3;
+    font-weight: 600;
+}
+
+.titulo-tecnologias {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.55rem;
+    font-weight: 700;
+    color: #e2e2e3;
+
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+
+    margin-bottom: 2rem;
+}
+
+.titulo-tecnologias .material-symbols-outlined {
+    color: #00dbe9;
+}
+
+.grilla-tecnologias {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+
+.tarjeta-tecnologia {
+    min-height: 86px;
+    padding: 0.85rem;
+
+    background: rgba(30, 32, 33, 0.58);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.55rem;
+
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.tarjeta-tecnologia {
+    --color-tecnologia: #00dbe9;
+}
+
+.tarjeta-tecnologia:hover {
+    transform: translateY(-6px);
+    border-color: var(--color-tecnologia);
+    background: rgba(30, 32, 33, 0.82);
+    box-shadow: 0 0 22px color-mix(in srgb, var(--color-tecnologia) 35%, transparent);
+}
+
+.icono-tecnologia {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+}
+
+.nombre-tecnologia {
+    color: #b9cacb;
+    font-size: 0.7rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .contenedor-sobre-mi {
+        grid-template-columns: 1fr;
+    }
+
+    .grilla-tecnologias {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .seccion-sobre-mi {
+        padding: 4rem 1rem;
+    }
+
+    .tarjeta-sobre-mi,
+    .tarjeta-tecnologias {
+        padding: 1.5rem;
+    }
+
+    .datos-sobre-mi {
+        grid-template-columns: 1fr;
+    }
+
+    .grilla-tecnologias {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 420px) {
+    .grilla-tecnologias {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

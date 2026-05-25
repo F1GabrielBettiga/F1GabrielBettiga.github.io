@@ -1,0 +1,54 @@
+<!-- navbar.html -->
+
+<nav class="fixed top-0 left-0 w-full z-50 transition-all duration-500 md:top-6 md:left-1/2 md:-translate-x-1/2 md:w-[95%] md:max-w-7xl"
+    id="navbar-principal">
+
+    <div
+        class="contenedor-navbar mx-auto px-5 h-16 bg-black/40 backdrop-blur-xl border border-white/10 rounded-full md:shadow-[0_0_20px_rgba(0,183,255,0.1)] relative overflow-visible group flex items-center">
+
+        <!-- Luz recorriendo el borde -->
+        <div class="orbit-path absolute top-0 left-0 w-2 h-2 bg-cyan-400 rounded-full glow-pulse z-[60]"></div>
+
+        <!-- Brillo sutil de fondo -->
+        <div
+            class="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-full">
+        </div>
+
+        <div class="relative z-10 flex items-center justify-between w-full">
+
+            <!-- Logotipo -->
+            <div class="flex-shrink-0">
+                <a class="text-xl md:text-2xl font-black tracking-tighter bg-gradient-to-r from-blue-400 via-cyan-400 to-purple-500 bg-clip-text text-transparent hover:scale-105 transition-transform duration-300"
+                    href="#inicio" id="logo-navbar">
+                </a>
+            </div>
+
+            <!-- Menú Desktop -->
+            <div class="hidden xl:flex items-center gap-8" id="enlaces-navbar-escritorio">
+            </div>
+
+            <!-- Botón Mobile / Tablet -->
+            <div class="xl:hidden">
+                <button aria-label="Abrir menú"
+                    class="p-2.5 rounded-xl bg-white/5 border border-white/10 text-white/70 hover:text-white transition-all active:scale-95"
+                    id="boton-menu-movil">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path d="M4 6h16M4 12h16M4 18h16" id="icono-hamburguesa" stroke-linecap="round"
+                            stroke-linejoin="round" stroke-width="2"></path>
+                        <path class="hidden" d="M6 18L18 6M6 6l12 12" id="icono-cerrar" stroke-linecap="round"
+                            stroke-linejoin="round" stroke-width="2"></path>
+                    </svg>
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Menú Desplegable Mobile / Tablet -->
+    <div class="hidden xl:hidden absolute top-[calc(100%+1rem)] left-4 right-4 bg-black/80 backdrop-blur-2xl border border-white/10 rounded-3xl overflow-hidden shadow-2xl animate-fade-in-down"
+        id="menu-movil-desplegable">
+        <div class="p-4 space-y-2" id="enlaces-navbar-mobile">
+        </div>
+    </div>
+
+</nav>

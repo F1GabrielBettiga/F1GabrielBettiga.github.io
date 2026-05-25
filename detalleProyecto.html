@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es" class="dark scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle del Proyecto - Gabriel Bettiga</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/css/estilosGlobales.css">
+    <link rel="stylesheet" href="assets/css/detalleProyecto.css">
+</head>
+
+<body>
+
+    <div class="contenedor-fondo-tech">
+        <div class="capa-cuadricula"></div>
+        <div class="resplandor-dinamico resplandor-cian"></div>
+        <div class="resplandor-dinamico resplandor-violeta"></div>
+    </div>
+
+    <main class="detalle-proyecto-main">
+
+        <a href="index.html#proyectos" class="volver-proyectos">
+            <span class="material-symbols-outlined">arrow_back</span>
+            Volver al portfolio
+        </a>
+
+        <section class="detalle-proyecto-header">
+            <div class="detalle-categoria">
+                <span></span>
+                <p id="detalle-proyecto-categoria"></p>
+            </div>
+
+            <h1 id="detalle-proyecto-titulo"></h1>
+
+            <p id="detalle-proyecto-descripcion"></p>
+        </section>
+
+        <section class="detalle-carrusel-wrapper">
+            <button class="boton-carrusel boton-carrusel-izquierda" id="btn-carrusel-izquierda">
+                <span class="material-symbols-outlined">chevron_left</span>
+            </button>
+
+            <div id="detalle-proyecto-carrusel" class="detalle-carrusel"></div>
+
+            <button class="boton-carrusel boton-carrusel-derecha" id="btn-carrusel-derecha">
+                <span class="material-symbols-outlined">chevron_right</span>
+            </button>
+        </section>
+
+        <section id="detalle-proyecto-descripcion-extendida" class="detalle-proyecto-descripcion-extendida"></section>
+
+        <section class="detalle-bloques">
+            <div class="detalle-tecnologias-card">
+                <div class="detalle-card-icono-fondo">
+                    <span class="material-symbols-outlined">memory</span>
+                </div>
+
+                <h2>
+                    <span class="material-symbols-outlined">settings_ethernet</span>
+                    Tecnologías implementadas
+                </h2>
+
+                <div id="detalle-proyecto-tecnologias" class="detalle-tecnologias-listado"></div>
+            </div>
+
+            <div id="detalle-proyecto-accion-card" class="detalle-accion-card">
+                <h2 id="detalle-proyecto-accion-titulo">Acceso directo</h2>
+                <p id="detalle-proyecto-accion-descripcion"></p>
+
+                <a id="detalle-proyecto-accion-boton" href="#" target="_blank" class="detalle-accion-boton">
+                    <span id="detalle-proyecto-accion-texto"></span>
+                    <span class="material-symbols-outlined">open_in_new</span>
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <a id="boton-flotante-cv" class="boton-flotante-cv" href="#" target="_blank">
+        <span>CV</span>
+        <span class="material-symbols-outlined">download</span>
+    </a>
+
+    <!-- Modal para ampliar imágenes del proyecto -->
+    <div id="modal-imagen-proyecto" class="modal-imagen-proyecto oculto">
+        <div class="modal-imagen-proyecto-contenido">
+
+            <button id="cerrar-modal-imagen-proyecto" class="cerrar-modal-imagen-proyecto" type="button">
+                <span class="material-symbols-outlined">close</span>
+            </button>
+
+            <div class="modal-imagen-proyecto-wrapper">
+                <img id="modal-imagen-proyecto-img" src="" alt="">
+            </div>
+
+            <div class="modal-imagen-proyecto-info">
+                <p id="modal-imagen-proyecto-titulo"></p>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="assets/js/configuracionGeneral.js"></script>
+    <script src="assets/js/proyectos.js"></script>
+    <script src="assets/js/renderizarDetalleProyecto.js"></script>
+</body>
+
+</html>
