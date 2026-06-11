@@ -307,6 +307,141 @@ const configuracionProyectos = {
                 tipo: "demo"
             }
         },
+        {
+            id: "segneos-landing",
+            titulo: "SEGNEOS",
+            categoria: "Landing page institucional",
+            descripcion: "Sitio web institucional desarrollado para SEGNEOS, consultora especializada en Seguridad, Higiene y Medio Ambiente, orientado a presentar servicios, generar confianza profesional y facilitar el contacto mediante formulario, WhatsApp y correo.",
+            descripcionDetalle: `
+<div class="detalle-descripcion-extendida">
+    <h2>Sobre el proyecto</h2>
+
+    <p>
+        Este proyecto consiste en una landing page corporativa desarrollada para SEGNEOS, una consultora orientada a brindar servicios integrales de Seguridad, Higiene y Medio Ambiente.
+        El objetivo principal fue crear una página profesional, clara y responsive que permita presentar la empresa, sus servicios y facilitar el contacto con potenciales clientes.
+    </p>
+
+    <p>
+        La página fue desarrollada con HTML, CSS y JavaScript puro, utilizando una estructura modular por secciones. Cada parte del sitio fue separada en archivos independientes para mejorar la organización, reutilización y mantenimiento del código.
+        Además, gran parte del contenido se administra desde un archivo de configuración general, permitiendo modificar textos, imágenes, links, datos de contacto, logo, favicon y visibilidad de componentes sin tocar directamente cada sección.
+    </p>
+
+    <p>
+        También se trabajó en la optimización visual y de rendimiento, utilizando imágenes comprimidas y formatos adecuados para mejorar la velocidad de carga, especialmente en dispositivos móviles.
+    </p>
+
+    <h3>Funcionalidades principales</h3>
+
+    <div class="detalle-aportes-grid">
+        <div>
+            <strong>Diseño responsive</strong>
+            <span>Adaptación completa para escritorio, tablet y celular, priorizando una buena experiencia móvil.</span>
+        </div>
+
+        <div>
+            <strong>Navbar dinámica</strong>
+            <span>Menú responsive con navegación por secciones, menú mobile y estado activo según la sección visible.</span>
+        </div>
+
+        <div>
+            <strong>Hero institucional</strong>
+            <span>Sección principal con imagen destacada, descripción de la consultora, beneficios y accesos rápidos de contacto.</span>
+        </div>
+
+        <div>
+            <strong>Servicios configurables</strong>
+            <span>Tarjetas dinámicas de servicios con iconos, títulos y descripciones editables desde la configuración general.</span>
+        </div>
+
+        <div>
+            <strong>Animaciones mobile</strong>
+            <span>Efecto de aparición en las tarjetas de servicios al hacer scroll en dispositivos móviles.</span>
+        </div>
+
+        <div>
+            <strong>Sobre nosotros</strong>
+            <span>Bloque institucional con enfoque técnico, valores destacados, imagen representativa y llamado a la acción.</span>
+        </div>
+
+        <div>
+            <strong>Formulario de contacto</strong>
+            <span>Formulario que valida campos obligatorios y genera automáticamente un mensaje para enviar por WhatsApp.</span>
+        </div>
+
+        <div>
+            <strong>Validaciones visuales</strong>
+            <span>Mensajes de error personalizados y resaltado de campos incompletos, evitando alertas nativas del navegador.</span>
+        </div>
+
+        <div>
+            <strong>Política de privacidad</strong>
+            <span>Checkbox obligatorio y modal reutilizable para visualizar la política de privacidad sin salir de la página.</span>
+        </div>
+
+        <div>
+            <strong>WhatsApp flotante</strong>
+            <span>Botón flotante independiente con número configurable, mensaje inicial y efecto de pulso visual.</span>
+        </div>
+
+        <div>
+            <strong>Footer configurable</strong>
+            <span>Pie de página con enlaces rápidos, datos de contacto y acceso al modal de política de privacidad.</span>
+        </div>
+
+        <div>
+            <strong>Optimización de imágenes</strong>
+            <span>Uso de imágenes optimizadas para mejorar tiempos de carga y rendimiento general de la landing.</span>
+        </div>
+    </div>
+
+    <p class="detalle-nota-proyecto">
+        Este proyecto fue desarrollado como una landing profesional para presentar los servicios de una consultora real.
+        La estructura modular permite reutilizar la base para futuros clientes, facilitando cambios de contenido, imágenes, branding y datos de contacto desde un archivo central de configuración.
+    </p>
+</div>
+`,
+            imagen: "assets/img/proyectos/proyecto-Segneos/Home.jpg",
+            alt: "SEGNEOS",
+            color: "#2E7D32",
+            etiquetas: [
+                "HTML5",
+                "CSS3",
+                "JavaScript"
+            ],
+            urlDetalle: "detalleProyecto.html?id=segneos-landing",
+            fotos: [
+                {
+                    titulo: "Home",
+                    url: "assets/img/proyectos/proyecto-Segneos/Home.jpg"
+                },
+                {
+                    titulo: "Servicios",
+                    url: "assets/img/proyectos/proyecto-Segneos/Servicios.jpg"
+                },
+                {
+                    titulo: "Sobre Nosotros",
+                    url: "assets/img/proyectos/proyecto-Segneos/SobreNosotros.jpg"
+                },
+                {
+                    titulo: "Contacto",
+                    url: "assets/img/proyectos/proyecto-Segneos/Contacto.jpg"
+                },
+                {
+                    titulo: "Formulario validado",
+                    url: "assets/img/proyectos/proyecto-Segneos/ContactoValidado.jpg"
+                },
+                {
+                    titulo: "Política de Privacidad",
+                    url: "assets/img/proyectos/proyecto-Segneos/Politicas.jpg"
+                }
+            ],
+            accion: {
+                mostrar: true,
+                texto: "Ver demo en vivo",
+                url: "https://f1gabrielbettiga.github.io/previews-clientes/",
+                tipo: "demo"
+            }
+        },
 
         {
             id: "paseos-isaias",
