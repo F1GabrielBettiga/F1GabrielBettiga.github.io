@@ -11,7 +11,7 @@ const datosPersonales = {
     descripcionProfesional:
         "Desarrollador de software con experiencia en el ecosistema Microsoft. Especializado en crear arquitecturas robustas, APIs escalables y soluciones empresariales con un enfoque en la calidad del código y la experiencia del usuario.",
 
-    email: "f1gabriel_bettiga@outlook.es",
+    email: "bettiga-gabriel@outlook.com",
 
     telefonoVisible: "+54 9 11 4917-7021",
     telefonoWhatsapp: "5491149177021",

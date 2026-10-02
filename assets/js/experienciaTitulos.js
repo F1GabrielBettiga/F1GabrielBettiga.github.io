@@ -6,6 +6,26 @@ const configuracionExperienciaTitulos = {
 
     items: [
         {
+            titulo: "Carrera Cybersecurity Engineer",
+            fecha: "Sept 2026 - En curso",
+            institucion: "EducaciónIT",
+            descripcion: "Formación en curso en ciberseguridad, orientada a la protección de sistemas, redes y aplicaciones, la identificación de vulnerabilidades y la aplicación de buenas prácticas de seguridad informática.",
+            tipo: "educacion",
+            orden: "2026-09-01",
+            certificado: false,
+            imagenCertificado: ""
+        },
+        {
+            titulo: "Programador Full Stack",
+            fecha: "Jul 2026 - Actualidad",
+            institucion: "Coppel Argentina",
+            descripcion: "Desarrollo y mantenimiento de funcionalidades para el e-commerce dentro del ecosistema VTEX. Desarrollo de interfaces y componentes reutilizables con React y TypeScript sobre VTEX IO, e integración con APIs REST/GraphQL. Implementación de funcionalidades desde el análisis hasta las pruebas, correcciones y despliegue. Resolución de incidencias en PDP, carrito, checkout, medios de pago y promociones. Administración de contenido con CMS, Site Editor y Master Data, refactorización de código y trabajo con Git/GitHub, Pull Requests y Code Reviews. Uso de Jira y Monday para gestionar requerimientos, y Cursor y OpenAI Codex como herramientas de apoyo al desarrollo.",
+            tipo: "experiencia",
+            orden: "2026-07-01",
+            certificado: false,
+            imagenCertificado: ""
+        },
+        {
             titulo: "Técnico Superior en Programación",
             fecha: "2020 - 2025",
             institucion: "UTN",
