@@ -120,13 +120,13 @@ const configuracionSobreMi = {
     subtitulo: "Mi camino en desarrollo de software.",
 
     parrafos: [
-        "Soy Técnico Superior en Programación egresado de la UTN, con experiencia en el área de sistemas trabajando en Texcom, donde participé en el mantenimiento y evolución de aplicaciones internas, desarrollo de pantallas, consultas a base de datos, soporte a usuarios y resolución de incidencias.",
+        "Soy Técnico Superior en Programación egresado de la UTN y desarrollador Full Stack, con experiencia en .NET/C#, SQL Server, React y TypeScript. Me interesa crear soluciones que respondan a necesidades reales, combinando interfaces claras, lógica de negocio e integración con APIs.",
 
-        "Durante esa experiencia también formé parte de la migración de una aplicación desde Visual Basic a .NET, implementando vistas, manejo de datos entre controladores y pantallas, ajustes funcionales y mejoras sobre sistemas utilizados en procesos internos de la empresa.",
+        "Actualmente trabajo como Programador Full Stack en Coppel Argentina, desarrollando y manteniendo funcionalidades de e-commerce dentro del ecosistema VTEX. Participo en el análisis, desarrollo, integración, pruebas y despliegue de soluciones, además de la resolución de incidencias y mejora del código.",
 
-        "Para seguir fortaleciendo mi perfil como desarrollador, realicé cursos de C#, .NET y SQL, y actualmente me encuentro estudiando la carrera de Ciencia de Datos e Inteligencia Artificial. Además, estoy mejorando mis conocimientos en React para ampliar mi stack y poder desarrollar interfaces más modernas y dinámicas.",
+        "Anteriormente trabajé en el área de sistemas de Texcom, donde participé en el mantenimiento de aplicaciones internas, el desarrollo de funcionalidades y la migración de una aplicación desde Visual Basic a .NET. Esa experiencia también me permitió conocer de cerca el soporte a usuarios y la infraestructura IT.",
 
-        "En paralelo, desarrollo proyectos freelance para clientes, como una aplicación web de pedidos para una panchería, una landing page para Paseos Isaías orientada a la gestión de reservas de viajes, y actualmente una aplicación de ventas para un local de motos dedicado a la venta de repuestos. Estos proyectos me permiten aplicar mis conocimientos en casos reales, combinando desarrollo web, lógica de negocio, diseño responsive e integración con WhatsApp."
+        "En paralelo, desarrollo proyectos freelance para clientes, como Paseos Isaías y BPF Motos. Continúo ampliando mi formación técnica y actualmente curso la carrera Cybersecurity Engineer en EducaciónIT, para incorporar conocimientos de seguridad al desarrollo de software."
     ],
 
     ubicacion: datosPersonales.ubicacion,
